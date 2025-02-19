@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Elementos Misceláneos</h1>
+                <p class="mt-4 text-gray-600 text-md">Esta sección reúne elementos visuales y funcionales que no encajan
+                    en las categorías principales del diseño. Aquí
+                    encontrarás loaders, avatares, íconos, imágenes y otros componentes diversos que complementan la
+                    experiencia de usuario.
+
+                    Estos elementos están diseñados para ser reutilizables y flexibles, adaptándose a diferentes
+                    contextos y necesidades en
+                    tu proyecto.</p>
+            </header>
+
+            <!-- Badge simple -->
+            <section id="loading-icons">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Cargando</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice indicadores dentro de los botones para indicar que
+                            una acción se está procesando o llevando a cabo en ese
+                            momento. También se puede cambiar el texto del elemento indicador y utilizar el texto del
+                            botón
+                            según sea necesario..</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <!-- flex justify-center items-center size-[46px] text-sm font-medium rounded-lg border
+                            border-transparent bg-blue-600
+                            text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50
+                            disabled:pointer-events-none -->
+
+                            <button type="button" class="h-12 btn-primary btn-lg btn-icon">
+                                <span class="spin-loading" role="status" aria-label="loading">
+                                    <span class="sr-only">Cargando...</span>
+                                </span>
+                            </button>
+                            <button type="button" class="h-12 btn-primary btn-lg btn-icon">
+                                <!-- inline-flex items-center px-4 py-3 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg gap-x-2 hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none -->
+                                <span class="spin-loading" role="status" aria-label="loading"></span>
+                                Cargando
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html"> 
+                            
+&lt;!-- Solo icono --&gt;
+&lt;button type="button" class="px-0 btn-primary btn-lg"&gt;
+    &lt;span class="spin-loading"&gt;
+        &lt;span class="sr-only"&gt;Cargando...&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Icono dentro de botón --&gt;
+&lt;button type="button" class="px-0 btn-primary btn-lg"&gt;
+    &lt;span
+        class="spin-loading"
+        role="status" aria-label="loading"&gt;&lt;/span&gt;
+    Cargando
+&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Badge size -->
+            <section id="aavatar-initials">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Avatar con iniciales</h2>
+                        <p class="mb-8 text-gray-600 text-md">Esto se puede utilizar en ausencia de una foto de perfil.
+                            Se pueden utilizar las iniciales del usuario. Por ejemplo,
+                            para Juan Pérez puede mostrar JP.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="avatar-simple">
+                                <span class="font-medium text-secondary-600">JP</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="avatar-simple"&gt;
+    &lt;span class="font-medium text-secondary-600"&gt;JP&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#loading-icons" class="block pb-1 btn-link">Cargando</a></li>
+                <li><a href="#aavatar-initials" class="block pb-1 btn-link">Avatar con iniciales</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script>
+        function closeAlert() {
+            const chipElement = document.getElementById('chip');
+            chipElement.style.display = 'none'; // Hide the chip
+        }
+    </script>
+</body>
+
+</html>

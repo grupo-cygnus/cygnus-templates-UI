@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- <script type="module" src="./src/js/load-components.js"></script> -->
+    <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+
+<body class="text-gray-900 ">
+    <header id="header"></header>
+    <div class="grid grid-cols-1 gap-3 pt-20 mx-auto md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Menu izquierdo -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Contenido -->
+        <main class="col-span-6 p-6 bg-white lg:col-span-8">
+            <div class="flex items-center justify-center min-h-screen bg-gray-100">
+                <div class="p-8 bg-white rounded-lg shadow-lg w-96">
+                    <h2 class="mb-6 text-2xl font-bold">Accede a tu cuenta</h2>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700">RUT</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="12345678K">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700">Contraseña</label>
+                            <input type="password"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <a href="#" class="text-sm text-blue-500">¿Olvidaste tu contraseña?</a>
+                        <button type="submit"
+                            class="w-full py-2 mt-6 text-white bg-blue-500 rounded-lg hover:bg-blue-600">Iniciar
+                            sesión</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Menu Derecho -->
+        <!-- <aside class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#button" class="block pb-1 btn-link">Botones</a></li>
+                <li><a href="#typography" class="block pb-1 btn-link">Tipografía</a></li>
+                <li><a href="#colors" class="block pb-1 btn-link">Colores</a></li>
+            </ul>
+        </aside> -->
+    </div>
+    <footer id="footer"></footer>
+    <script type="module" src="./src/js/load-components.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Cygnus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-50">
+    <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+        <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                <path
+                    d="M38.0936 20.1227C37.6631 21.2749 35.5756 21.1631 34.4539 21.6647C31.9863 22.7667 30.0413 23.5448 29.9447 24.8103C29.68 28.2687 36.5862 35.4094 33.205 37.7038C29.8245 39.9982 28.4299 26.6205 23.3637 27.5617C18.2996 28.5053 21.9129 38.5878 17.3216 37.6473C12.728 36.7053 20.6667 25.1085 18.5953 21.9519C15.9305 17.8919 9.45201 14.8917 9.80627 12.8157C10.1154 11.0048 11.6275 11.2994 12.0442 11.7552C21.4133 22.0277 34.2077 18.2695 36.724 18.4014C37.975 18.467 38.4471 19.1795 38.0936 20.1227ZM25.0502 10.1445C27.1134 9.69582 29.0657 10.6311 29.4149 12.2327C29.7641 13.8344 28.3768 15.496 26.3129 15.9455C24.2514 16.3942 22.299 15.4597 21.9506 13.8581C21.6015 12.2568 22.9887 10.594 25.0502 10.1449M23.9996 0.000395058C10.7446 0.000395058 0 10.7453 0 24.001C0 37.2567 10.7446 48 23.9996 48C37.2547 48 48 37.2559 48 24.001C48 10.7461 37.2547 0 23.9996 0"
+                    fill="#CC5224" />
+            </svg>
+        </div>
+        <h2 class="text-xl font-semibold text-center">Accede a tu cuenta</h2>
+        <p class="mb-6 text-sm text-center text-gray-600">Ingresa tu RUT sin puntos, ni guión.</p>
+
+        <form action="#" method="POST" class="space-y-4">
+            <div>
+                <label for="rut" class="text-sm font-medium text-gray-700">RUT</label>
+                <input type="text" id="rut" placeholder="12345678K"
+                    class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+            <div>
+                <label for="password" class="text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••"
+                    class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+            <div class="text-right">
+                <a href="#" class="text-sm text-blue-600 hover:underline">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Iniciar
+                sesión</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+            <section id="acordion-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-2xl font-semibold">Instalación del Ambiente</h2>
+                        <p class="mb-8 text-gray-600 text-md">Configura tu ambiente para comenzar a trabajar con
+                            Cygnus-UI
+                            siguiendo estos pasos</p>
+
+                        <!-- Requisitos Previos -->
+                        <section class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold">Requisitos Previos</h3>
+                            <p class="mb-4">Asegúrate de tener instalados los siguientes programas:</p>
+                            <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                                <li><a href="https://nodejs.org/" class="text-blue-600 hover:underline"
+                                        target="_blank">Node.js</a> (versión
+                                    LTS recomendada)</li>
+                                <li><a href="https://git-scm.com/" class="text-blue-600 hover:underline"
+                                        target="_blank">Git</a></li>
+                            </ul>
+                        </section>
+
+                        <!-- Instalación -->
+                        <section class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold">Instalación</h3>
+                            <p class="mb-4">Sigue estos pasos para instalar el proyecto:</p>
+                            <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                                    <code class="language-html">  
+git clone https://github.com/grupo-cygnus/Cygnus-UI.git
+cd cygnus-ui
+npm install
+                                    </code>
+                                </pre>
+                        </section>
+
+                        <!-- Scripts Disponibles -->
+                        <section class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold">Scripts Disponibles</h3>
+                            <p class="mb-4">En el archivo <code>package.json</code>, hay varios scripts
+                                configurados:</p>
+                            <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                                <li><strong>npm run dev</strong>: Inicia un servidor de desarrollo en <a
+                                        href="http://localhost:5173" class="text-blue-600 hover:underline"
+                                        target="_blank">http://localhost:5173</a>.</li>
+                                <li><strong>npm run build</strong>: Genera los archivos listos para producción en
+                                    <code>dist</code>.
+                                </li>
+                                <li><strong>npm run watch</strong>: Observa cambios en los estilos y los recompila
+                                    automáticamente.</li>
+                                <li><strong>npm run preview</strong>: Previsualiza el proyecto generado tras
+                                    compilar.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Desarrollo Local -->
+                        <section class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold">Desarrollo Local</h3>
+                            <p class="mb-4">Ejecuta el servidor de desarrollo:</p>
+                            <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                                    <code class="language-html">  
+npm run dev
+                                    </code>
+                                </pre>
+                            <p class="mt-4">Abre tu navegador en la dirección mostrada en la consola (por defecto <a
+                                    href="http://localhost:5173" class="text-blue-600 hover:underline"
+                                    target="_blank">http://localhost:5173</a>).</p>
+                        </section>
+
+                        <!-- Compilación para Producción -->
+                        <section class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold">Compilación para Producción</h3>
+                            <p class="mb-4">Genera los archivos compilados con el comando:</p>
+                            <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                                    <code class="language-html">  
+npm run build
+                                    </code>
+                                </pre>
+                            <p class="mt-6">Los archivos estarán disponibles en la carpeta <code>dist</code>.</p>
+                        </section>
+                    </div>
+
+
+                </div>
+
+    </div>
+    </section>
+
+
+    </main>
+
+    <!-- Sidebar Right -->
+    <!-- <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-alert" class="block pb-1 btn-link">Alerta simple</a></li>
+                <li><a href="#alert-icon" class="block pb-1 btn-link">Alerta con ícono</a></li>
+                <li><a href="#alert-colors" class="block pb-1 btn-link">Colores de alertas</a></li>
+                <li><a href="#alert-content" class="block pb-1 btn-link">Alerta con contenido</a></li>
+            </ul>
+        </aside> -->
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

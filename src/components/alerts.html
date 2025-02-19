@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Alertas</h1>
+                <p class="mt-4 text-gray-600 text-md">Una alerta muestra un mensaje breve e importante que atrae la
+                    atención del usuario sin interrumpir su tarea. Utilice
+                    este elemento cuando necesite mostrar mensajes muy importantes a los usuarios o cuando necesite un
+                    contenedor estático
+                    persistente que pueda cerrarse mediante acciones del usuario.</p>
+            </header>
+
+            <section id="simple-alert">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Alerta simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Este ejemplo de alerta con texto blanco y fondo gris
+                            oscuro crea una relación de alto contraste que mejora la
+                            legibilidad y atrae la atención.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-4 mb-4">
+
+                            <!-- <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-600 bg-primary-25 border-primary-300">
+                                Una simple alerta rellena para mostrar el mensaje.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-600 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div> -->
+
+                            <div role="alert" class="alert">
+                                Una simple alerta rellena para mostrar el mensaje información.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div role="alert" class="alert"&gt;
+    Una simple alerta rellena para mostrar el mensaje información.
+    &lt;button
+        class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+        type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"
+            stroke-width="2"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="alert-icon">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Alerta con icono</h2>
+                        <p class="mb-8 text-gray-600 text-md">Puede agregar un ícono al comienzo del componente de
+                            alerta usando la etiqueta <code>svg</code>.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div role="alert"
+    class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+        class="w-5 h-5 mr-2"&gt;
+        &lt;path stroke-linecap="round" stroke-linejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+        &lt;/path&gt;
+    &lt;/svg&gt;
+    Una simple alerta rellena para mostrar el mensaje.
+    &lt;button
+        class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+        type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"
+            stroke-width="2"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="alert-colors">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Colores de alertas</h2>
+                        <p class="mb-8 text-gray-600 text-md">El componente de alerta viene con los 5 estados desde el
+                            color primario, secundario hasta los colores de error, advetencia y éxito.</p>
+
+                        <!-- Primary -->
+                        <div class="flex flex-col items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje información.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Secondary -->
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-secondary-700 bg-secondary-25 border-secondary-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje de información secundario.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-secondary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Error -->
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-error-700 bg-error-25 border-error-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-error-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Warning -->
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-warning-700 bg-warning-25 border-warning-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje de advetencia.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-warning-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Success -->
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-success-700 bg-success-25 border-success-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                                Una simple alerta rellena para mostrar el mensaje de éxito.
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-success-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+
+&lt;!-- Primario --&gt;
+&lt;div role="alert"
+    class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+        class="w-5 h-5 mr-2"&gt;
+        &lt;path stroke-linecap="round" stroke-linejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+        &lt;/path&gt;
+    &lt;/svg&gt;
+    Una simple alerta rellena para mostrar el mensaje información
+    &lt;button
+        class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+        type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"
+            stroke-width="2"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Secundario --&gt;
+&lt;div role="alert"
+    class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-secondary-700 bg-secondary-25 border-secondary-300"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+        class="w-5 h-5 mr-2"&gt;
+        &lt;path stroke-linecap="round" stroke-linejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+        &lt;/path&gt;
+    &lt;/svg&gt;
+    Una simple alerta rellena para mostrar el mensaje de información secundario.
+    &lt;button
+        class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-secondary-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+        type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"
+            stroke-width="2"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Error --&gt;
+&lt;div class="flex items-center justify-center w-full gap-4 mb-4"&gt;
+
+    &lt;div role="alert"
+        class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-error-700 bg-error-25 border-error-300"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            class="w-5 h-5 mr-2"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+        Una simple alerta rellena para mostrar el mensaje de error.
+        &lt;button
+            class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-error-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+            type="button"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-5 h-5" stroke-width="2"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+                &lt;/path&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Warning --&gt;
+    &lt;div class="flex items-center justify-center w-full gap-4 mb-4"&gt;
+    
+        &lt;div role="alert"
+            class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-warning-700 bg-warning-25 border-warning-300"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="w-5 h-5 mr-2"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+                &lt;/path&gt;
+            &lt;/svg&gt;
+            Una simple alerta rellena para mostrar el mensaje de advetencia.
+            &lt;button
+                class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-warning-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                type="button"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-5 h-5" stroke-width="2"&gt;
+                    &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+                    &lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    
+    &lt;/div&gt;
+    
+    &lt;!-- Success --&gt;
+    &lt;div class="flex items-center justify-center w-full gap-4 mb-4"&gt;
+    
+        &lt;div role="alert"
+            class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-success-700 bg-success-25 border-success-300"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="w-5 h-5 mr-2"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+                &lt;/path&gt;
+            &lt;/svg&gt;
+            Una simple alerta rellena para mostrar el mensaje de éxito.
+            &lt;button
+                class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-success-700 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                type="button"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-5 h-5" stroke-width="2"&gt;
+                    &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+                    &lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    
+    &lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="alert-content">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Alerta con contenido</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice el siguiente ejemplo para utilizar un componente
+                            de alerta con elementos de contenido como título y descripción</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div role="alert"
+                                class="relative flex flex-col w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300">
+                                <p class="flex text-base">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2 mt-0.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                        </path>
+                                    </svg>
+                                    Acabamos de lanzar una
+                                    nueva función
+                                </p>
+                                <p class="p-3 pt-1 ml-4">
+                                    No sé qué significa esa palabra. Soy feliz. Pero el éxito, que se remonta a lo que a
+                                    los ojos de alguien éxito
+                                    significa. Para mí, el éxito es la paz interior. Es un buen día para mí.
+                                </p>
+
+                                <button
+                                    class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-600 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+                                    type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" class="w-5 h-5" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div role="alert"
+    class="relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300"&gt;
+
+    &lt;div role="alert"
+        class="relative flex flex-col w-full p-3 mt-3 text-sm border rounded-md text-primary-700 bg-primary-25 border-primary-300"&gt;
+        &lt;p class="flex text-base"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="h-5 w-5 mr-2 mt-0.5"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"&gt;
+                &lt;/path&gt;
+            &lt;/svg&gt;
+            Acabamos de lanzar una
+            nueva función
+        &lt;/p&gt;
+        &lt;p class="p-3 pt-1 ml-4"&gt;
+            No sé qué significa esa palabra. Soy feliz. Pero el éxito, que se remonta a lo que a
+            los ojos de alguien éxito
+            significa. Para mí, el éxito es la paz interior. Es un buen día para mí.
+        &lt;/p&gt;
+    
+        &lt;button
+            class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-primary-600 hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5"
+            type="button"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"
+                stroke-width="2"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"&gt;
+                &lt;/path&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-alert" class="block pb-1 btn-link">Alerta simple</a></li>
+                <li><a href="#alert-icon" class="block pb-1 btn-link">Alerta con ícono</a></li>
+                <li><a href="#alert-colors" class="block pb-1 btn-link">Colores de alertas</a></li>
+                <li><a href="#alert-content" class="block pb-1 btn-link">Alerta con contenido</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

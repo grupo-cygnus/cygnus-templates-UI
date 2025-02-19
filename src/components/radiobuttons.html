@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Radiobuttons</h1>
+                <p class="mt-4 text-gray-600 text-md">Los botones de opción son circulares y suelen aparecer en grupos;
+                    cuando un usuario selecciona un botón de opción de un
+                    grupo, cualquier botón de opción seleccionado previamente en el mismo grupo se deselecciona
+                    automáticamente. Este
+                    comportamiento garantiza que el usuario pueda elegir solo una opción del grupo, lo que hace que los
+                    botones de opción
+                    sean ideales para opciones en las que solo se aplica una opción.</p>
+            </header>
+
+            <section id="radio-simple">
+
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="text-xl font-semibold mb-2">Radiobutton simple con texto</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto blanco, esquinas
+                            redondeadas y un efecto de sombra al pasar el mouse, mostrando interactividad.</p>
+
+                        <div class="inline-flex items-center">
+
+                            <div class="flex gap-10">
+                                <div class="inline-flex items-center">
+                                    <label class="relative flex items-center cursor-pointer" for="html">
+                                        <input name="framework" type="radio"
+                                            class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-sceondary-300 checked:border-sceondary-400"
+                                            id="html">
+                                        <span
+                                            class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transceondary-x-1/2 -transceondary-y-1/2 bg-sceondary-800 peer-checked:opacity-100 top-1/2 left-1/2">
+                                        </span>
+                                    </label>
+                                    <label class="ml-2 text-sm cursor-pointer text-sceondary-600" for="html">Si</label>
+                                </div>
+
+                                <div class="inline-flex items-center">
+                                    <label class="relative flex items-center cursor-pointer" for="react">
+                                        <input name="framework" type="radio"
+                                            class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-sceondary-300 checked:border-sceondary-400"
+                                            id="react" checked="">
+                                        <span
+                                            class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transceondary-x-1/2 -transceondary-y-1/2 bg-sceondary-800 peer-checked:opacity-100 top-1/2 left-1/2">
+                                        </span>
+                                    </label>
+                                    <label class="ml-2 text-sm cursor-pointer text-sceondary-600" for="react">No</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="inline-flex items-center"&gt;
+
+    &lt;div class="flex gap-10"&gt;
+        &lt;div class="inline-flex items-center"&gt;
+            &lt;label class="relative flex items-center cursor-pointer" for="html"&gt;
+                &lt;input name="framework" type="radio"
+                    class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-sceondary-300 checked:border-sceondary-400"
+                    id="html"&gt;
+                &lt;span
+                    class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transceondary-x-1/2 -transceondary-y-1/2 bg-sceondary-800 peer-checked:opacity-100 top-1/2 left-1/2"&gt;
+                &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label class="ml-2 text-sm cursor-pointer text-sceondary-600" for="html"&gt;Si&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class="inline-flex items-center"&gt;
+            &lt;label class="relative flex items-center cursor-pointer" for="react"&gt;
+                &lt;input name="framework" type="radio"
+                    class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-sceondary-300 checked:border-sceondary-400"
+                    id="react" checked=""&gt;
+                &lt;span
+                    class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transceondary-x-1/2 -transceondary-y-1/2 bg-sceondary-800 peer-checked:opacity-100 top-1/2 left-1/2"&gt;
+                &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label class="ml-2 text-sm cursor-pointer text-sceondary-600" for="react"&gt;No&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </section>
+
+            <section id="radio-link">
+
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="text-xl font-semibold mb-2">Botón de radio con enlace</h2>
+                        <p class="mb-8 text-gray-600 text-md">Este ejemplo muestra cómo se pueden implementar botones de
+                            opción con etiquetas que incluyen un hipervínculo.</p>
+
+                        <!-- Components -->
+
+                        <div class="flex flex-col gap-10">
+                            <div class="inline-flex items-center">
+                                <label class="relative flex items-center cursor-pointer" for="html-link">
+                                    <input name="framework" type="radio"
+                                        class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-secondary-300 checked:border-secondary-400"
+                                        id="html-link" checked />
+                                    <!-- <span
+                                        class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transecondary-x-1/2 -transecondary-y-1/2 bg-secondary-800 peer-checked:opacity-100 top-1/2 left-1/2"></span> -->
+                                </label>
+                                <label class="ml-2 text-sm cursor-pointer text-secondary-600" for="html-link">
+                                    <p>
+                                        Estoy de acuerdo con los &nbsp;
+                                        <a href="#" class="font-medium underline hover:text-secondary-800">
+                                            términos y condiciones</a>.
+                                    </p>
+                                </label>
+                            </div>
+
+                            <div class="inline-flex items-center">
+                                <label class="relative flex items-center cursor-pointer" for="react-link">
+                                    <input name="framework" type="radio"
+                                        class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-secondary-300 checked:border-secondary-400"
+                                        id="react-link" />
+                                    <!-- <span
+                                        class="absolute w-3 h-3 transition-opacity duration-200 transform rounded-full opacity-0 -transecondary-x-1/2 -transecondary-y-1/2 bg-secondary-800 peer-checked:opacity-100 top-1/2 left-1/2"></span> -->
+                                </label>
+                                <label class="ml-2 text-sm cursor-pointer text-secondary-600" for="react-link">
+                                    <p>
+                                        No estoy de acuerdo con los&nbsp;
+                                        <a href="#" class="font-medium underline hover:text-secondary-800">
+                                            términos y condiciones</a>.
+                                    </p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="inline-flex items-center"&gt;
+    &lt;label class="flex items-center gap-2 cursor-pointer"&gt;
+        &lt;input type="radio" name="radio-group" class="radio-input peer" /&gt;
+        &lt;div class="radio-box"&gt;
+            &lt;div class="radio-inner"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span class="radio-label"&gt;Recuérdame&lt;/span&gt;
+            &lt;p class="radio-description"&gt;Recuerda mis datos&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </section>
+
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#radio-simple" class="block pb-1 btn-link">Radiobutton simple con texto</a></li>
+                <li><a href="#radio-link" class="block pb-1 btn-link">Radiobutton con enlace</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

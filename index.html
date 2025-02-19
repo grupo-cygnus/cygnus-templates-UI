@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- <script type="module" src="./src/js/load-components.js"></script> -->
+    <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+
+<body class="text-gray-900 ">
+    <header id="header"></header>
+    <div class="grid grid-cols-1 gap-3 pt-20 mx-auto md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Menu izquierdo -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Contenido -->
+        <main class="col-span-6 p-6 bg-white lg:col-span-8">
+            <h1 class="mb-4 text-xl font-bold">Templates</h1>
+            <h2 class="mb-4 text-lg font-bold">Template de login y cambio de contraseña</h2>
+            <p class="mb-6 text-sm text-gray-600">
+                <a class="btn-link" href="login.html">Login prueba</a>
+                <a class="btn-link" href="login-01.html">Login</a>
+                <a class="btn-link" href="password-recovery-steps.html">Password recovery steps</a>
+                <a class="btn-link" href="password-recovery-01.html">Password recovery 01</a>
+                <a class="btn-link" href="password-recovery-02.html">Password recovery 02</a>
+                <a class="btn-link" href="password-recovery-06.html">Password recovery 06</a>
+                <a class="btn-link" href="password-recovery-07.html">Password recovery 07</a>
+            </p>
+            <br>
+            <h2 class="mb-4 text-lg font-bold">Template de Mainboard</h2>
+            <p class="mb-6 text-sm text-gray-600">
+                <a class="btn-link" href="mainboard.html">Mainboard</a>
+            </p>
+            <br>
+            <h2 class="mb-4 text-lg font-bold">Template de Dashboard</h2>
+            <p class="mb-6 text-sm text-gray-600">
+                <a class="btn-link" href="dashborad.html">Dashboard</a>
+            </p>
+        </main>
+
+    </div>
+    <footer id="footer"></footer>
+    <script type="module" src="./src/js/load-components.js"></script>
+</body>
+
+</html>

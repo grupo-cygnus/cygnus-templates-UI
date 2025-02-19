@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-secondary-900 bg-secondary-50">
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Tablas responsivas con overflow</h1>
+                <p class="mt-4 text-secondary-600 text-md">Este tipo de tablas se adaptan a cualquier dispositivo. si
+                    los elementos son muy grandes, se desplazan horizontalmente o cambian de estado de "display", este
+                    último tiene una desventaja, ya que hay que generar la tabla en los estados de "display" para mobile
+                    y desktop por separado.</p>
+            </header>
+
+            <!-- overflow-rows -->
+            <section id="overflow-rows">
+                <div class="min-h-[140px] rounded-lg border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tablas responsivas (Overflows)</h2>
+                        <p class="mb-8 text-secondary-600 text-md">Las tablas más grandes o las tablas que no se pueden
+                            restringir fácilmente deben utilizar el desplazamiento horizontal</p>
+                        <div class="mb-4">
+
+                            <!-- Table overflow -->
+
+                            <div class="flex flex-col">
+                                <div class="pb-4 overflow-x-auto">
+                                    <div class="inline-block min-w-full align-middle">
+                                        <div class="overflow-hidden border border-gray-300 rounded-lg">
+                                            <table class="min-w-full table-auto rounded-xl">
+                                                <thead class="bg-secondary-50">
+                                                    <tr class="bg-gray-50">
+                                                        <th class="">
+                                                            <div class="flex items-center px-5 py-5 ">
+                                                                <input type="checkbox" value=""
+                                                                    class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                                            </div>
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Compañia </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            ID usuario </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Nombre / Email </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Tipo </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Tipo de industria </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Fecha de incorporación </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Presupuesto </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Estado </th>
+                                                        <th scope="col"
+                                                            class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                            Acciones </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="divide-y divide-gray-300 ">
+                                                    <tr class="transition-all duration-500 bg-white hover:bg-gray-50">
+                                                        <td class="">
+                                                            <div class="flex items-center px-5 py-5 ">
+                                                                <input type="checkbox" value=""
+                                                                    class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap ">
+                                                            Lider</td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            20010510
+                                                        </td>
+                                                        <td class="px-5 py-3 ">
+                                                            <div class="flex items-center w-48 gap-3">
+                                                                <div class="avatar-simple">
+                                                                    <span
+                                                                        class="font-medium text-secondary-600">JP</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p class="text-sm font-normal text-gray-900">Juan
+                                                                        Pérez</p>
+                                                                    <p
+                                                                        class="text-xs font-normal leading-5 text-gray-400">
+                                                                        juan.perez@email.cl
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Vendedor</td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Accesorios
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Jun. 24, 2023
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            $500.000 </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            <div class="badge-success bagde-xs">Activo</div>
+                                                        </td>
+                                                        <td class="flex p-5 items-center gap-0.5">
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="transition-all duration-500 bg-white hover:bg-gray-50">
+                                                        <td class="">
+                                                            <div class="flex items-center px-5 py-5 ">
+                                                                <input type="checkbox" value=""
+                                                                    class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap ">
+                                                            Cencosud </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            20010511
+                                                        </td>
+                                                        <td class="w-48 px-5 py-3">
+                                                            <div class="flex items-center w-48 gap-3">
+                                                                <div class="avatar-simple">
+                                                                    <span
+                                                                        class="font-medium text-secondary-600">SN</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p class="text-sm font-normal text-gray-900">
+                                                                        Sandra Narvaez</p>
+                                                                    <p
+                                                                        class="text-xs font-normal leading-5 text-gray-400">
+                                                                        sandra.narvaez@email.cl
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Partner </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Electronics
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Feb. 23, 2023
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            $530.000 </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            <div class="badge-error bagde-xs">Cancelado</div>
+                                                        </td>
+                                                        <td class="flex p-5 items-center gap-0.5">
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="transition-all duration-500 bg-white hover:bg-gray-50">
+                                                        <td class="">
+                                                            <div class="flex items-center px-5 py-5 ">
+                                                                <input type="checkbox" value=""
+                                                                    class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap ">
+                                                            Falabella
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            20010512
+                                                        </td>
+                                                        <td class="w-48 px-5 py-3 whitespace-nowrap">
+                                                            <div class="flex items-center w-48 gap-3">
+                                                                <div class="avatar-simple">
+                                                                    <span
+                                                                        class="font-medium text-secondary-600">CD</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p class="text-sm font-normal text-gray-900">
+                                                                        Carla Díaz</p>
+                                                                    <p
+                                                                        class="text-xs font-normal leading-5 text-gray-400">
+                                                                        carla.diaz@email.cl
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Customer
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Telecommunications </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            Oct. 23, 2023
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            $708.500
+                                                        </td>
+                                                        <td
+                                                            class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap">
+                                                            <div class="badge-warning">Pendiente</bagde>
+                                                        </td>
+                                                        <td class=" flex p-5 items-center gap-0.5">
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="p-2 btn-icon-only-tertiary" type="button">
+                                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="flex flex-col"&gt;
+    &lt;div class="pb-4 overflow-x-auto"&gt;
+        &lt;div class="inline-block min-w-full align-middle"&gt;
+            &lt;div class="overflow-hidden border border-gray-300 rounded-lg"&gt;
+                &lt;table class="min-w-full table-auto rounded-xl"&gt;
+                    &lt;thead class="bg-secondary-50"&gt;
+                        &lt;tr class=" bg-gray-50"&gt;
+                            &lt;th class=""&gt;
+                                &lt;div class="flex items-center px-5 py-5 "&gt;
+                                    &lt;input type="checkbox" value=""
+                                        class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"&gt;
+                                &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Compañia &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                ID usuario &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Nombre / Email &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Tipo &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Tipo de industria &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Fecha de incorporación &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Presupuesto &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Estado &lt;/th&gt;
+                            &lt;th scope="col"
+                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                                Acciones &lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody class="divide-y divide-gray-300 "&gt;
+                        &lt;tr class="transition-all duration-500 bg-white hover:bg-gray-50"&gt;
+                            &lt;td class=""&gt;
+                                &lt;div class="flex items-center px-5 py-5 "&gt;
+                                    &lt;input type="checkbox" value=""
+                                        class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap "&gt;
+                                Lider&lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                20010510
+                            &lt;/td&gt;
+                            &lt;td class="px-5 py-3 "&gt;
+                                &lt;div class="flex items-center w-48 gap-3"&gt;
+                                    &lt;div
+                                        class="avatar-simple"&gt;
+                                        &lt;span class="font-medium text-secondary-600"&gt;JP&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="data"&gt;
+                                        &lt;p class="text-sm font-normal text-gray-900"&gt;Juan
+                                            Pérez&lt;/p&gt;
+                                        &lt;p class="text-xs font-normal leading-5 text-gray-400"&gt;
+                                            juan.perez@email.cl
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Vendedor&lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Accesorios
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Jun. 24, 2023
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                $500.000 &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                &lt;div class="badge-success"&gt;Activo&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="flex p-5 items-center gap-0.5"&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr class="transition-all duration-500 bg-white hover:bg-gray-50"&gt;
+                            &lt;td class=""&gt;
+                                &lt;div class="flex items-center px-5 py-5 "&gt;
+                                    &lt;input type="checkbox" value=""
+                                        class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap "&gt;
+                                Cencosud &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                20010511
+                            &lt;/td&gt;
+                            &lt;td class="w-48 px-5 py-3"&gt;
+                                &lt;div class="flex items-center gap-3"&gt;
+                                    &lt;div
+                                        class="avatar-simple"&gt;
+                                        &lt;span class="font-medium text-secondary-600"&gt;SN&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="data"&gt;
+                                        &lt;p class="text-sm font-normal text-gray-900"&gt;
+                                            Sandra Narvaez&lt;/p&gt;
+                                        &lt;p class="text-xs font-normal leading-5 text-gray-400"&gt;
+                                            sandra.narvaez@email.cl
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Partner &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Electronics
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Feb. 23, 2023
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                $530.000 &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                &lt;div class="badge-error"&gt;Cancelado&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="flex p-5 items-center gap-0.5"&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr class="transition-all duration-500 bg-white hover:bg-gray-50"&gt;
+                            &lt;td class=""&gt;
+                                &lt;div class="flex items-center px-5 py-5 "&gt;
+                                    &lt;input type="checkbox" value=""
+                                        class="w-5 h-5 mr-2 border border-gray-300 rounded-md appearance-none hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap "&gt;
+                                Falabella
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                20010512
+                            &lt;/td&gt;
+                            &lt;td class="w-48 px-5 py-3 whitespace-nowrap"&gt;
+                                &lt;div class="flex items-center gap-3"&gt;
+                                    &lt;div
+                                        class="avatar-simple"&gt;
+                                        &lt;span class="font-medium text-secondary-600"&gt;CD&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="data min-w-[150px]"&gt;
+                                        &lt;p class="text-sm font-normal text-gray-900 whitespace-nowrap"&gt;
+                                            Cameron Díaz&lt;/p&gt;
+                                        &lt;p class="text-xs font-normal leading-5 text-gray-400 whitespace-nowrap"&gt;
+                                            cameron.diaz@email.cl &lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Customer
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Telecommunications &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                Oct. 23, 2023
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                $708.500
+                            &lt;/td&gt;
+                            &lt;td class="p-5 text-sm font-medium leading-6 text-gray-900 whitespace-nowrap"&gt;
+                                &lt;div class="badge-warning"&gt;Pendiente&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td class="flex p-5 items-center gap-0.5"&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M11 3.99998H6.8C5.11984 3.99998 4.27976 3.99998 3.63803 4.32696C3.07354 4.61458 2.6146 5.07353 2.32698 5.63801C2 6.27975 2 7.11983 2 8.79998V17.2C2 18.8801 2 19.7202 2.32698 20.362C2.6146 20.9264 3.07354 21.3854 3.63803 21.673C4.27976 22 5.11984 22 6.8 22H15.2C16.8802 22 17.7202 22 18.362 21.673C18.9265 21.3854 19.3854 20.9264 19.673 20.362C20 19.7202 20 18.8801 20 17.2V13M7.99997 16H9.67452C10.1637 16 10.4083 16 10.6385 15.9447C10.8425 15.8957 11.0376 15.8149 11.2166 15.7053C11.4184 15.5816 11.5914 15.4086 11.9373 15.0627L21.5 5.49998C22.3284 4.67156 22.3284 3.32841 21.5 2.49998C20.6716 1.67156 19.3284 1.67155 18.5 2.49998L8.93723 12.0627C8.59133 12.4086 8.41838 12.5816 8.29469 12.7834C8.18504 12.9624 8.10423 13.1574 8.05523 13.3615C7.99997 13.5917 7.99997 13.8363 7.99997 14.3255V16Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                                &lt;button class="p-2 btn-icon-only-tertiary" type="button"&gt;
+                                    &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"&gt;
+                                        &lt;path
+                                            d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                        &lt;path
+                                            d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/button&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Responsive table -->
+            <section id="responsive-table">
+                <div class="min-h-[140px] rounded-lg border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tablas responsivas</h2>
+                        <p class="mb-8 text-secondary-600 text-md">Tabla que cambia su "display" dependiendo del ancho
+                            de la pantalla.
+                        </p>
+                        <div class="flex items-center justify-center gap-4 mb-4">
+
+                            <div class="w-full overflow-x-auto bg-white border border-gray-300 rounded-lg">
+                                <table class="hidden w-full md:table">
+                                    <thead class="bg-secondary-50">
+                                        <tr class="bg-gray-50">
+                                            <th
+                                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                ID usuario</th>
+                                            <th
+                                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                Nombre</th>
+                                            <th
+                                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                Tipo</th>
+                                            <th
+                                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                Fecha de incorporación</th>
+                                            <th
+                                                class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start">
+                                                Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                20010510</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                Juan Pérez</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                Reponedor</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                13/01/2024</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                <div class="badge-success">Activo</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                20010234</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                Constanza Ramis</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                Vendedor</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                20/01/2024</td>
+                                            <td
+                                                class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap">
+                                                <div class="badge-warning badge-xs">Pendiente</div>
+                                            </td>
+                                        </tr>
+                                        <!-- Agregar más filas aquí -->
+                                    </tbody>
+                                </table>
+
+                                <!-- Versión móvil como lista -->
+                                <div class="md:hidden">
+                                    <div class="p-4">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">ID usuario:</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">20010510</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Nombre:</span>
+                                            <span class="text-sm font-medium text-right text-secondary-800">Juan
+                                                Pérez</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Tipo:</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">Reponedor</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Fecha de incorporación :</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">13/01/2024</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Estado</span>
+                                            <span class="text-sm font-medium text-right text-secondary-800">
+                                                <div class="badge-success badge-xs">Activo</div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="p-4">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">ID usuario:</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">20010234</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Nombre:</span>
+                                            <span class="text-sm font-medium text-right text-secondary-800">Constanza
+                                                Ramis</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Tipo:</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">Vendedor</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Fecha de incorporación :</span>
+                                            <span
+                                                class="text-sm font-medium text-right text-secondary-800">20/01/2024</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-secondary-500">Estado</span>
+                                            <span class="text-sm font-medium text-right text-secondary-800">
+                                                <div class="badge-warning">Pendiente</div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Agregar más bloques de lista aquí -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="w-full overflow-x-auto bg-white border border-gray-300 rounded-lg"&gt;
+    &lt;table class="hidden w-full md:table"&gt;
+        &lt;thead class="bg-secondary-50"&gt;
+            &lt;tr class="bg-gray-50"&gt;
+                &lt;th class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                    ID usuario&lt;/th&gt;
+                &lt;th class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                    Nombre&lt;/th&gt;
+                &lt;th class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                    Tipo&lt;/th&gt;
+                &lt;th class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                    Fecha de incorporación&lt;/th&gt;
+                &lt;th class="px-5 py-3 text-xs font-medium uppercase text-secondary-500 text-start"&gt;
+                    Estado&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    20010510&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    Juan Pérez&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    Reponedor&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    13/01/2024&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    &lt;div class="badge-success"&gt;Activo&lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    20010234&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    Constanza Ramis&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    Vendedor&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    20/01/2024&lt;/td&gt;
+                &lt;td class="px-4 py-2 text-sm font-medium text-secondary-800 whitespace-nowrap"&gt;
+                    &lt;div class="badge-warning"&gt;Pendiente&lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;!-- Agregar más filas aquí --&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;!-- Versión móvil como lista --&gt;
+    &lt;div class="md:hidden"&gt;
+        &lt;div class="p-4"&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;ID usuario:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;20010510&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Nombre:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;Juan
+                    Pérez&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Tipo:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;Reponedor&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Fecha de incorporación :&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;13/01/2024&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Estado&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;
+                    &lt;div class="badge-success"&gt;Activo&lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr&gt;
+        &lt;div class="p-4"&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;ID usuario:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;20010234&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Nombre:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;Constanza
+                    Ramis&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Tipo:&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;Vendedor&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Fecha de incorporación :&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;20/01/2024&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="flex items-center justify-between mb-2"&gt;
+                &lt;span class="font-medium text-secondary-500"&gt;Estado&lt;/span&gt;
+                &lt;span class="text-sm font-medium text-right text-secondary-800"&gt;
+                    &lt;div class="badge-warning"&gt;Pendiente&lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Agregar más bloques de lista aquí --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#overflow-rows" class="block pb-1 btn-link">Tablas responsivas (Overflows)</a></li>
+                <li><a href="#responsive-table" class="block pb-1 btn-link">Tablas responsivas</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+{
+  "typography": {
+    "font-family": "Inter",
+    "common-letter-spacing": "-2%",
+    "Big 2xl": {
+      "Regular": {
+        "font-size": "4.5rem",
+        "font-weight": "400",
+        "line-height": "5.625rem"
+      },
+      "Medium": {
+        "font-size": "4.5rem",
+        "font-weight": "500",
+        "line-height": "5.625rem"
+      },
+      "Semibold": {
+        "font-size": "4.5rem",
+        "font-weight": "600",
+        "line-height": "5.625rem"
+      },
+      "Bold": {
+        "font-size": "4.5rem",
+        "font-weight": "700",
+        "line-height": "5.625rem"
+      }
+    },
+    "Big xl": {
+      "Regular": {
+        "font-size": "3.75rem",
+        "font-weight": "400",
+        "line-height": "4.5rem"
+      },
+      "Medium": {
+        "font-size": "3.75rem",
+        "font-weight": "500",
+        "line-height": "4.5rem"
+      },
+      "Semibold": {
+        "font-size": "3.75rem",
+        "font-weight": "600",
+        "line-height": "4.5rem"
+      },
+      "Bold": {
+        "font-size": "3.75rem",
+        "font-weight": "700",
+        "line-height": "4.5rem"
+      }
+    },
+    "Big lg": {
+      "Regular": {
+        "font-size": "3rem",
+        "font-weight": "400",
+        "line-height": "56px"
+      },
+      "Medium": {
+        "font-size": "3rem",
+        "font-weight": "500",
+        "line-height": "56px"
+      },
+      "Semibold": {
+        "font-size": "3rem",
+        "font-weight": "600",
+        "line-height": "56px"
+      },
+      "Bold": {
+        "font-size": "3rem",
+        "font-weight": "700",
+        "line-height": "56px"
+      }
+    },
+    "Big md": {
+      "Regular": {
+        "font-size": "2.25rem",
+        "font-weight": "400",
+        "line-height": "2.75rem"
+      },
+      "Medium": {
+        "font-size": "2.25rem",
+        "font-weight": "500",
+        "line-height": "2.75rem"
+      },
+      "Semibold": {
+        "font-size": "2.25rem",
+        "font-weight": "600",
+        "line-height": "2.75rem"
+      },
+      "Bold": {
+        "font-size": "2.25rem",
+        "font-weight": "700",
+        "line-height": "2.75rem"
+      }
+    },
+    "Big sm": {
+      "Regular": {
+        "font-size": "1.875rem",
+        "font-weight": "400",
+        "line-height": "2.375rem"
+      },
+      "Medium": {
+        "font-size": "1.875rem",
+        "font-weight": "500",
+        "line-height": "2.375rem"
+      },
+      "Semibold": {
+        "font-size": "1.875rem",
+        "font-weight": "600",
+        "line-height": "2.375rem"
+      },
+      "Bold": {
+        "font-size": "1.875rem",
+        "font-weight": "700",
+        "line-height": "2.375rem"
+      }
+    },
+    "Big xs": {
+      "Regular": {
+        "font-size": "1.5rem",
+        "font-weight": "400",
+        "line-height": "2rem"
+      },
+      "Medium": {
+        "font-size": "1.5rem",
+        "font-weight": "500",
+        "line-height": "2rem"
+      },
+      "Semibold": {
+        "font-size": "1.5rem",
+        "font-weight": "600",
+        "line-height": "2rem"
+      },
+      "Bold": {
+        "font-size": "1.5rem",
+        "font-weight": "700",
+        "line-height": "2rem"
+      }
+    },
+    "Text xl": {
+      "Regular": {
+        "font-size": "1.25rem",
+        "font-weight": "400",
+        "line-height": "1.875rem"
+      },
+      "Medium": {
+        "font-size": "1.25rem",
+        "font-weight": "500",
+        "line-height": "1.875rem"
+      },
+      "Semibold": {
+        "font-size": "1.25rem",
+        "font-weight": "600",
+        "line-height": "1.875rem"
+      },
+      "Bold": {
+        "font-size": "1.25rem",
+        "font-weight": "700",
+        "line-height": "1.875rem"
+      }
+    },
+    "Text lg": {
+      "Regular": {
+        "font-size": "1.125rem",
+        "font-weight": "400",
+        "line-height": "1.75rem"
+      },
+      "Medium": {
+        "font-size": "1.125rem",
+        "font-weight": "500",
+        "line-height": "1.75rem"
+      },
+      "Semibold": {
+        "font-size": "1.125rem",
+        "font-weight": "600",
+        "line-height": "1.75rem"
+      },
+      "Bold": {
+        "font-size": "1.125rem",
+        "font-weight": "700",
+        "line-height": "1.75rem"
+      }
+    },
+    "Text md": {
+      "Regular": {
+        "font-size": "1rem",
+        "font-weight": "400",
+        "line-height": "1.5rem"
+      },
+      "Medium": {
+        "font-size": "1rem",
+        "font-weight": "500",
+        "line-height": "1.5rem"
+      },
+      "Semibold": {
+        "font-size": "1rem",
+        "font-weight": "600",
+        "line-height": "1.5rem"
+      },
+      "Bold": {
+        "font-size": "1rem",
+        "font-weight": "700",
+        "line-height": "1.5rem"
+      }
+    },
+    "Text sm": {
+      "Regular": {
+        "font-size": "0.875rem",
+        "font-weight": "400",
+        "line-height": "1.25rem"
+      },
+      "Medium": {
+        "font-size": "0.875rem",
+        "font-weight": "500",
+        "line-height": "1.25rem"
+      },
+      "Semibold": {
+        "font-size": "0.875rem",
+        "font-weight": "600",
+        "line-height": "1.25rem"
+      },
+      "Bold": {
+        "font-size": "0.875rem",
+        "font-weight": "700",
+        "line-height": "1.25rem"
+      }
+    },
+    "Text xs": {
+      "Regular": {
+        "font-size": "0.75rem",
+        "font-weight": "400",
+        "line-height": "1.125rem"
+      },
+      "Medium": {
+        "font-size": "0.75rem",
+        "font-weight": "500",
+        "line-height": "1.125rem"
+      },
+      "Semibold": {
+        "font-size": "0.75rem",
+        "font-weight": "600",
+        "line-height": "1.125rem"
+      },
+      "Bold": {
+        "font-size": "0.75rem",
+        "font-weight": "700",
+        "line-height": "1.125rem"
+      }
+    },
+    "Text xxs": {
+      "Regular": {
+        "font-size": "0.625rem",
+        "font-weight": "400",
+        "line-height": "1rem"
+      },
+      "Medium": {
+        "font-size": "0.625rem",
+        "font-weight": "500",
+        "line-height": "1rem"
+      },
+      "Semibold": {
+        "font-size": "0.625rem",
+        "font-weight": "600",
+        "line-height": "1rem"
+      },
+      "Bold": {
+        "font-size": "0.625rem",
+        "font-weight": "700",
+        "line-height": "1rem"
+      }
+    }
+  }
+}

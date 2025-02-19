@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Selects</h1>
+                <p class="mt-4 text-gray-600 text-md">El select de búsqueda aplica a los usuarios a introducir sus
+                    consultas, afinar los resultados y mostrar fácilmente
+                    la información relevante.
+
+                    La barra de búsqueda es claramente visible colocándola en un lugar común y esperado
+                    por lo general, en la parte superior de la página- y haciéndola lo suficientemente grande como para
+                    que los usuarios la
+                    vean fácilmente.
+                    Además, se utiliza el icono de una lupa para representar la función de búsqueda, ya que es el
+                    símbolo más reconocido.
+                </p>
+            </header>
+
+            <section id="select-search-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Selector de búsqueda con botón</h2>
+                        <p class="mb-8 text-gray-600 text-md">Este ejemplo de una entrada de búsqueda con el botón de
+                            búsqueda ubicado dentro del campo de entrada. Este diseño
+                            compacto permite a los usuarios escribir su consulta y hacer clic inmediatamente en el botón
+                            de búsqueda dentro del
+                            mismo elemento, ahorrando espacio.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <input class="input-default pr-28" placeholder="Escribir aquí..." />
+                                    <button class="btn-search" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-4 h-4 mr-2">
+                                            <path fill-rule="evenodd"
+                                                d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        Búsqueda
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="relative"&gt;
+    &lt;input class="input-default pr-28" placeholder="Escribir aquí..." /&gt;
+    &lt;button class="btn-search" type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2"&gt;
+            &lt;path fill-rule="evenodd"
+                d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                clip-rule="evenodd" /&gt;
+        &lt;/svg&gt;
+
+        Búsqueda
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="select-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Selector con menú desplegable</h2>
+                        <p class="mb-8 text-gray-600 text-md">Este ejemplo de entrada de búsqueda incluye un menú
+                            desplegable para filtrar las categorías de búsqueda. Los usuarios
+                            pueden seleccionar entre distintas categorías, como Dashboards, UI Kits y Components, antes
+                            de ingresar su consulta de
+                            búsqueda. Este diseño ayuda a refinar las búsquedas y brinda resultados más precisos.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative mt-2">
+                                    <div class="absolute flex items-center top-1 left-1">
+                                        <button id="dropdownButton"
+                                            class="rounded border border-transparent py-1 px-1.5 text-center flex items-center text-sm transition-all text-secondary-600">
+                                            <span id="dropdownSpan" class="overflow-hidden text-ellipsis">Temas</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </button>
+                                        <div class="h-6 ml-1 border-l border-secondary-200"></div>
+                                        <div id="dropdownMenu" class="hidden dropdown-menu">
+                                            <ul id="dropdownOptions">
+                                                <li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                                                    data-value="Themes">
+                                                    Temas</li>
+                                                <li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                                                    data-value="Plugins">
+                                                    Plugins</li>
+                                                <li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                                                    data-value="Snippets">
+                                                    Snippets</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="w-full pl-24 input-default pr-28 ease"
+                                        placeholder="Widgets..." />
+
+                                    <button class="btn-search" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                            class="w-4 h-4 mr-1.5">
+                                            <path fill-rule="evenodd"
+                                                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        Búsqueda
+                                    </button>
+                                </div>
+                            </div>
+
+                            <script>
+                                document.getElementById('dropdownButton').addEventListener('click', function () {
+                                    var dropdownMenu = document.getElementById('dropdownMenu');
+                                    if (dropdownMenu.classList.contains('hidden')) {
+                                        dropdownMenu.classList.remove('hidden');
+                                    } else {
+                                        dropdownMenu.classList.add('hidden');
+                                    }
+                                });
+
+                                document.getElementById('dropdownOptions').addEventListener('click', function (event) {
+                                    if (event.target.tagName === 'LI') {
+                                        const dataValue = event.target.getAttribute('data-value');
+                                        document.getElementById('dropdownSpan').textContent = dataValue;
+                                        document.getElementById('dropdownMenu').classList.add('hidden');
+                                    }
+                                });
+
+                                document.addEventListener('click', function (event) {
+                                    var isClickInside = document.getElementById('dropdownButton').contains(event.target) || document.getElementById('dropdownMenu').contains(event.target);
+                                    var dropdownMenu = document.getElementById('dropdownMenu');
+
+                                    if (!isClickInside) {
+                                        dropdownMenu.classList.add('hidden');
+                                    }
+                                });
+                            </script>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="relative mt-2"&gt;
+    &lt;div class="absolute flex items-center top-1 left-1"&gt;
+        &lt;button id="dropdownButton"
+            class="rounded border border-transparent py-1 px-1.5 text-center flex items-center text-sm transition-all text-secondary-600"&gt;
+            &lt;span id="dropdownSpan" class="overflow-hidden text-ellipsis"&gt;Temas&lt;/span&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 ml-1"&gt;
+                &lt;path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;div class="h-6 ml-1 border-l border-secondary-200"&gt;&lt;/div&gt;
+        &lt;div id="dropdownMenu" class="hidden dropdown-menu"&gt;
+            &lt;ul id="dropdownOptions"&gt;
+                &lt;li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                    data-value="Themes"&gt;
+                    Temas&lt;/li&gt;
+                &lt;li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                    data-value="Plugins"&gt;
+                    Plugins&lt;/li&gt;
+                &lt;li class="px-4 py-2 text-sm cursor-pointer text-secondary-600 hover:bg-secondary-50"
+                    data-value="Snippets"&gt;
+                    Snippets&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="w-full pl-24 input-default pr-28 ease" placeholder="Widgets..." /&gt;
+
+    &lt;button class="btn-search" type="button"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 mr-1.5"&gt;
+            &lt;path fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd" /&gt;
+        &lt;/svg&gt;
+        Búsqueda
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#select-search-simple" class="block pb-1 btn-link">Selector de búsqueda con botón</a>
+                </li>
+                <li><a href="#select-size" class="block pb-1 btn-link">Selector con menú desplegable</a></li>
+
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    <!-- <script type="module" src="../js/collapse.js"></script> -->
+
+</body>
+
+</html>

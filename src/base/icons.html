@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Menu izquierdo -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Contenido -->
+        <main class="col-span-6 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Colores UI</h1>
+                <p class="mt-4 text-gray-600 text-md">Nuestro sistema de diseño aprovecha un útil conjunto de estilos de
+                    color
+                    como punto de partida perfecto
+                    para cualquier
+                    marca o proyecto. En lo que respecta al color, el contraste es fundamental para garantizar la
+                    legibilidad del texto.</p>
+            </header>
+
+            <section>
+                <div id="content-wrapper" class="relative z-20 mt-8 prose prose-slate dark:prose-dark">
+
+                    <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-1">
+                        <div class="space-x-3">
+
+                            <section id="icon-options">
+                                <h2 class="text-xl font-semibold mb-2">Opciones para el Uso de Iconos SVG</h2>
+                                <p class="mb-4 text-gray-600">Existen tres formas principales de integrar iconos SVG en
+                                    nuestros
+                                    proyectos. Aquí te
+                                    mostramos cómo funciona cada una y sus ventajas/desventajas.</p>
+
+                                <!-- Opción 1: Inline -->
+                                <div class="mb-8">
+                                    <h3 class="text-lg font-medium">1. SVG Inline</h3>
+                                    <p class="mb-2 text-gray-500">
+                                        Usamos el SVG directamente en el HTML, permitiendo un control total sobre su
+                                        color y tamaño a
+                                        través de
+                                        clases Tailwind.
+                                    </p>
+                                    <div class="p-4 border rounded-lg bg-gray-50">
+                                        <div class="text-blue-500">
+                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1 14.59L8.41 12l1.41-1.41 2.59 2.59 5.59-5.59L19 9z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <pre class="p-2 mt-2 overflow-auto text-white bg-gray-900 rounded-lg">
+                                        <code>&lt;div class="text-blue-500"&gt;
+                                            &lt;svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+                                                &lt;path d="..."&gt;&lt;/path&gt;
+                                            &lt;/svg&gt;
+                                        &lt;/div&gt;</code>
+                                                </pre>
+                                </div>
+
+                                <!-- Opción 2: Como imagen -->
+                                <div class="mb-8">
+                                    <h3 class="text-lg font-medium">2. SVG como Imagen (`&lt;img&gt;`)</h3>
+                                    <p class="mb-2 text-gray-500">
+                                        Los SVG se integran como imágenes externas referenciadas, útil para casos donde
+                                        no necesitamos
+                                        cambiar
+                                        colores o estilos dinámicos.
+                                    </p>
+                                    <div class="p-4 border rounded-lg bg-gray-50">
+                                        <img src="assets/icons/check.svg" alt="Check Icon" class="w-6 h-6">
+                                    </div>
+                                    <pre class="p-2 mt-2 overflow-auto text-white bg-gray-900 rounded-lg">
+                                        <code>&lt;img src="assets/icons/check.svg" alt="Check Icon" class="w-6 h-6"&gt;</code>
+                                                </pre>
+                                </div>
+
+                                <!-- Opción 3: Como CSS Background -->
+                                <div class="mb-8">
+                                    <h3 class="text-lg font-medium">3. SVG como Background en CSS</h3>
+                                    <p class="mb-2 text-gray-500">
+                                        Usamos el SVG como una propiedad `background-image` en CSS. Ideal para estilos
+                                        decorativos o
+                                        iconos que no
+                                        cambian dinámicamente.
+                                    </p>
+                                    <div class="p-4 border rounded-lg bg-gray-50">
+                                        <div class="w-6 h-6 bg-center bg-no-repeat bg-contain"
+                                            style="background-image: url('assets/icons/check.svg');"></div>
+                                    </div>
+                                    <pre class="p-2 mt-2 overflow-auto text-white bg-gray-900 rounded-lg">
+                                        <code>.icon {
+                                            width: 1.5rem;
+                                            height: 1.5rem;
+                                            background-image: url('assets/icons/check.svg');
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
+                                        }</code>
+                                                </pre>
+                                </div>
+                            </section>
+
+                        </div>
+
+                    </div>
+            </section>
+        </main>
+
+        <!-- Menu Derecho -->
+        <!-- <aside class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#button" class="block pb-1 btn-link">Botones</a></li>
+                <li><a href="#typography" class="block pb-1 btn-link">Tipografía</a></li>
+                <li><a href="#colors" class="block pb-1 btn-link">Colores</a></li>
+            </ul>
+        </aside> -->
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+</body>
+
+</html>

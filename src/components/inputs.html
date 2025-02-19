@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Inputs</h1>
+                <p class="mt-4 text-gray-600 text-md">Los campos de entrada permiten a los usuarios introducir texto
+                    en
+                    una interfaz de usuario. Suelen aparecer en
+                    formularios y cuadros de diálogo. Los campos de entrada en móviles deben tener un tamaño de
+                    texto de
+                    al menos 16px para evitar el zoom automático en los navegadores móviles.</p>
+            </header>
+
+            <section id="input-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Input simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de "input" para comenzar fácilmente.
+                            Es
+                            perfecto para formularios que requieren la entrada de
+                            texto, como el registro de usuarios, formularios de inicio de sesión o cualquier formulario
+                            en
+                            el que los usuarios
+                            necesiten ingresar un nombre de usuario.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <input class="input-default input-md" placeholder="Este es el placecholder..." />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;input class="input-default input-md" placeholder="Este es el placecholder..." /&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="input-with-label">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Input con label</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de "input" con el texto de
+                            marcador de
+                            posición "Este es el placeholder", guiando al usuario para que
+                            introduzca su nombre. La etiqueta se coloca encima del campo de entrada para obtener
+                            claridad
+                            sobre qué información se
+                            requiere.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="w-full max-w-sm">
+
+                                <label class="label-input">Label</label>
+                                <input class="input-default input-md" placeholder="Este es el placeholder..." />
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm"&gt;
+    &lt;label class="label-input"&gt;Label&lt;/label&gt;
+    &lt;input class="input-default input-md" placeholder="Este es el placeholder..." /&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="hint-text">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Texto de ayuda</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="w-full max-w-sm">
+                                <label class="label-input">
+                                    Label
+                                </label>
+                                <input class="input-default input-md" placeholder="Este es el placeholder..." />
+                                <p class="hint-text">Este es un texto de ayuda para el
+                                    usuario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm"&gt;
+    &lt;label class="label-input"&gt;Label&lt;/label&gt;
+    &lt;input class="input-default input-md" placeholder="Este es el placeholder..." /&gt;
+    &lt;p class="hint-text"&gt;Este es un texto de ayuda para el usuario.&lt;/p&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="input-interactive">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Label interactivo top</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas
+                            redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="w-full max-w-sm min-w-[200px] space-y-6">
+                                <div class="relative">
+                                    <input id="input-field" class="input-interactive peer" type="text"
+                                        placeholder=" " />
+                                    <label for="input-field" class="label-interactive">
+                                        Email
+                                    </label>
+                                </div>
+
+                                <!-- Floating Input -->
+                                <div class="relative">
+                                    <input type="email" id="hs-floating-input-email" class="input-default peer p-4 placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+                                        focus:pt-6
+                                        focus:pb-2
+                                        [&:not(:placeholder-shown)]:pt-6
+                                        [&:not(:placeholder-shown)]:pb-2
+                                        autofill:pt-6
+                                        autofill:pb-2" placeholder="correo@email.com">
+                                    <label for="hs-floating-input-email" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                        peer-focus:scale-90
+                                        peer-focus:translate-x-0.5
+                                        peer-focus:-translate-y-1.5
+                                        peer-focus:text-gray-500
+                                        peer-[:not(:placeholder-shown)]:scale-90
+                                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                        peer-[:not(:placeholder-shown)]:text-gray-500">Email</label>
+                                </div>
+                                <!-- End Floating Input -->
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px] space-y-6"&gt;
+    &lt;div class="relative"&gt;
+        &lt;input id="input-field" class="input-interactive peer" type="text" placeholder=" " /&gt;
+        &lt;label for="input-field" class="label-interactive"&gt;
+            Email
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Floating Input --&gt;
+    &lt;div class="relative"&gt;
+        &lt;input type="email" id="hs-floating-input-email" class="input-default peer p-4 placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+            focus:pt-6
+            focus:pb-2
+            [&:not(:placeholder-shown)]:pt-6
+            [&:not(:placeholder-shown)]:pb-2
+            autofill:pt-6
+            autofill:pb-2" placeholder="correo@email.com"&gt;
+        &lt;label for="hs-floating-input-email" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+            peer-focus:scale-90
+            peer-focus:translate-x-0.5
+            peer-focus:-translate-y-1.5
+            peer-focus:text-gray-500
+            peer-[:not(:placeholder-shown)]:scale-90
+            peer-[:not(:placeholder-shown)]:translate-x-0.5
+            peer-[:not(:placeholder-shown)]:-translate-y-1.5
+            peer-[:not(:placeholder-shown)]:text-gray-500"&gt;Email&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;!-- End Floating Input --&gt;
+
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="input-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Tamaños</h2>
+                        <p class="mb-8 text-gray-600 text-md">Input apilados de tamaños pequeños a grandes..</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="max-w-sm space-y-3 w-full min-w-[200px]">
+                                <input type="text" class="input-default input-sm" placeholder="Tamaño SM">
+                                <input type="text" class="input-default input-md" placeholder="Tamaño Normal">
+                                <input type="text" class="input-default input-lg" placeholder="Tamaño LG">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="max-w-sm space-y-3 w-full min-w-[200px]"&gt;
+    &lt;input type="text" class="input-sm" placeholder="Tamaño SM"&gt;
+    &lt;input type="text" class="input-default input-md" placeholder="Tamaño Normal"&gt;
+    &lt;input type="text" class="input-lg" placeholder="Tamaño LG"&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="input-icon">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Input con icono</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de input con elemento de icono si
+                            desea agregar un toque amigable y hacerlo más interactivo.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="flex-col w-full max-w-sm space-y-4">
+
+                                <div class="relative">
+                                    <input type="text" class="pr-8 input-default input-md"
+                                        placeholder="Escribe aquí..." />
+
+                                    <svg viewBox="0 0 24 24" fill="currentColor"
+                                        class="absolute w-5 h-5 top-3 right-2.5 text-secondary-600"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                                            stroke="text-secondary-500" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+
+                                <div class="relative">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"
+                                        class="absolute w-5 h-5 top-3 left-2.5 text-secondary-600"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                                            stroke="text-secondary-500" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <input type="text" class="pl-8 input-default input-md"
+                                        placeholder="Escribe aquí..." />
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="relative"&gt;
+    &lt;input type="text"
+        class="input-default input-md"
+        placeholder="Type here..." /&gt;
+    &lt;svg viewBox="0 0 24 24" fill="currentColor" class="absolute w-5 h-5 top-3 right-2.5 text-secondary-600"
+        xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path
+            d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+            stroke="text-secondary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Input group -->
+            <section id="input-group">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Grupo de inputs</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de entrada de teléfono con un ícono
+                            de teléfono a la izquierda de la entrada, agregando una señal
+                            visual para el tipo de entrada requerida.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-8 mb-4">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <label class="block mb-1 text-sm text-secondary-600">
+                                    Número de contacto
+                                </label>
+                                <div class="relative">
+                                    <p
+                                        class="absolute inset-y-0 left-0 flex items-center p-2 text-sm text-secondary-600">
+                                        +56 9
+                                    </p>
+                                    <input id="contactGroup"
+                                        class="w-full py-2 pl-16 pr-3 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+                                        placeholder="123-45 67" pattern="^\+\d{1,3}\s\d{1,3}-\d{3}-\d{4}$"
+                                        title="El número de teléfono debe tener al menos 7 números" maxlength="7"
+                                        required />
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="flex rounded-lg shadow-sm">
+                                    <span
+                                        class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50">SM</span>
+                                    <input type="text" class="input-sm input-group">
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="flex rounded-lg shadow-sm">
+                                    <span
+                                        class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50">MD</span>
+                                    <input type="text" class="input-md input-group">
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="flex shadow-sm">
+                                    <span
+                                        class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50">LG</span>
+                                    <input type="text" class="input-lg input-group">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;label class="block mb-1 text-sm text-secondary-600"&gt;
+        Número de contacto
+    &lt;/label&gt;
+    &lt;div class="relative"&gt;
+        &lt;p class="absolute inset-y-0 left-0 flex items-center p-2 text-sm text-secondary-600"&gt;
+            +56 9
+        &lt;/p&gt;
+        &lt;input id="contactGroup"
+            class="w-full py-2 pl-16 pr-3 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+            placeholder="123-45 67" pattern="^\+\d{1,3}\s\d{1,3}-\d{3}-\d{4}$"
+            title="El número de teléfono debe tener al menos 7 números" maxlength="7" required /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="flex rounded-lg shadow-sm"&gt;
+        &lt;span
+            class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50"&gt;SM&lt;/span&gt;
+        &lt;input type="text" class="input-sm input-group"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="flex rounded-lg shadow-sm"&gt;
+        &lt;span
+            class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50"&gt;MD&lt;/span&gt;
+        &lt;input type="text" class="input-md input-group"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="flex shadow-sm"&gt;
+        &lt;span
+            class="inline-flex items-center px-4 text-sm border text-secondary-500 border-secondary-200 min-w-fit rounded-s-md border-e-0 bg-secondary-50"&gt;LG&lt;/span&gt;
+        &lt;input type="text" class="input-lg input-group"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Input group -->
+            <section id="input-group">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Grupo de inputs</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de entrada de teléfono con un ícono
+                            de teléfono a la izquierda de la entrada, agregando una señal
+                            visual para el tipo de entrada requerida.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-8 mb-4">
+
+                            <div class="max-w-sm space-y-3 w-full min-w-[200px]">
+                                <input type="text"
+                                    class="input-default input-md disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="Input Deshabilitado" disabled="">
+                                <input type="text"
+                                    class="input-default input-md disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="Input Deshabilitado readonly" disabled="" readonly="">
+
+                                <div class="relative">
+                                    <input type="email"
+                                        class="input-default input-md peer ps-11 disabled:opacity-50 disabled:pointer-events-none"
+                                        placeholder="Entrar un nombre" disabled="">
+                                    <div
+                                        class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
+                                        <svg class="text-gray-500 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="relative"&gt;
+    &lt;input type="text"
+        class="w-full py-2 pl-3 pr-10 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-600 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+        placeholder="Type here..." /&gt;
+
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+        class="absolute w-5 h-5 top-2.5 right-2.5 text-secondary-600"&gt;
+        &lt;path
+            d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"&gt;
+        &lt;/path&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Input validations -->
+            <section id="input-validations">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">Validaciones</h2>
+                        <p class="mb-8 text-gray-600 text-md">Proporciona información valiosa y procesable a los
+                            usuarios con la validación de formularios HTML5.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-8 mb-4">
+
+                            <div class="max-w-sm space-y-4 w-full min-w-[200px]">
+                                <div>
+                                    <label for="hs-validation-name-error"
+                                        class="block mb-2 text-sm font-medium">Email</label>
+                                    <div class="relative">
+                                        <input type="text" id="hs-validation-name-error" name="hs-validation-name-error"
+                                            class="py-3 input-default border-error-500 focus:border-error-500 focus:ring-error-500"
+                                            requierror="" aria-describedby="hs-validation-name-error-helper">
+                                        <div
+                                            class="absolute inset-y-0 flex items-center pointer-events-none end-0 pe-3">
+                                            <svg class="text-error-500 shrink-0 size-4"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" x2="12" y1="8" y2="12"></line>
+                                                <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-error-600" id="hs-validation-name-error-helper">Por
+                                        favor
+                                        introduzca una dirección de correo válido.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="hs-validation-name-success"
+                                        class="block mb-2 text-sm font-medium">Email</label>
+                                    <div class="relative">
+                                        <input type="text" id="hs-validation-name-success"
+                                            name="hs-validation-name-success"
+                                            class="px-4 py-3 input-default border-success-500 focus:border-success-500 focus:ring-success-500"
+                                            required="" aria-describedby="hs-validation-name-success-helper">
+                                        <div
+                                            class="absolute inset-y-0 flex items-center pointer-events-none end-0 pe-3">
+                                            <svg class="text-success-500 shrink-0 size-4"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-success-600" id="hs-validation-name-success-helper">
+                                        Ingreso exitoso</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="max-w-sm space-y-4 w-full min-w-[200px]"&gt;
+    &lt;div&gt;
+        &lt;label for="hs-validation-name-error" class="block mb-2 text-sm font-medium"&gt;Email&lt;/label&gt;
+        &lt;div class="relative"&gt;
+            &lt;input type="text" id="hs-validation-name-error" name="hs-validation-name-error"
+                class="py-3 input-default border-error-500 focus:border-error-500 focus:ring-error-500" requierror=""
+                aria-describedby="hs-validation-name-error-helper"&gt;
+            &lt;div class="absolute inset-y-0 flex items-center pointer-events-none end-0 pe-3"&gt;
+                &lt;svg class="text-error-500 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"&gt;
+                    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+                    &lt;line x1="12" x2="12" y1="8" y2="12"&gt;&lt;/line&gt;
+                    &lt;line x1="12" x2="12.01" y1="16" y2="16"&gt;&lt;/line&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="mt-2 text-sm text-error-600" id="hs-validation-name-error-helper"&gt;Por
+            favor
+            introduzca una dirección de correo válido.
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;label for="hs-validation-name-success" class="block mb-2 text-sm font-medium"&gt;Email&lt;/label&gt;
+        &lt;div class="relative"&gt;
+            &lt;input type="text" id="hs-validation-name-success" name="hs-validation-name-success"
+                class="px-4 py-3 input-default border-success-500 focus:border-success-500 focus:ring-success-500"
+                required="" aria-describedby="hs-validation-name-success-helper"&gt;
+            &lt;div class="absolute inset-y-0 flex items-center pointer-events-none end-0 pe-3"&gt;
+                &lt;svg class="text-success-500 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"&gt;
+                    &lt;polyline points="20 6 9 17 4 12"&gt;&lt;/polyline&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="mt-2 text-sm text-success-600" id="hs-validation-name-success-helper"&gt;
+            Ingreso exitoso&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Input validations -->
+            <section id="file-input">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-1 text-xl font-semibold">File input</h2>
+                        <p class="mb-8 text-gray-600 text-md">Una entrada de archivo estándar para cargar archivos.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-8 mb-4">
+
+                            <div class="max-w-sm space-y-4 w-full min-w-[200px]">
+                                <form class="max-w-sm">
+                                    <label for="file-input" class="sr-only">Choose file</label>
+                                    <input type="file" name="file-input" id="file-input"
+                                        class="block w-full text-sm border border-gray-200 rounded-lg shadow-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none file:bg-gray-50 file:border-0 file:me-4 file:py-3 file:px-4">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;form class="max-w-sm"&gt;
+    &lt;label for="file-input" class="sr-only"&gt;Choose file&lt;/label&gt;
+    &lt;input type="file" name="file-input" id="file-input"
+        class="block w-full text-sm border border-gray-200 rounded-lg shadow-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none file:bg-gray-50 file:border-0 file:me-4 file:py-3 file:px-4"&gt;
+&lt;/form&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-input" class="block pb-1 btn-link">Input simple</a></li>
+                <li><a href="#input-with-label" class="block pb-1 btn-link">input con label</a></li>
+                <li><a href="#input-with-hint-text" class="block pb-1 btn-link">Texto de ayuda</a></li>
+                <li><a href="#input-interactive" class="block pb-1 btn-link">Label interactivo top</a></li>
+                <li><a href="#input-icon" class="block pb-1 btn-link">Input con iconos</a></li>
+                <li><a href="#file-input" class="block pb-1 btn-link">File input</a></li>
+
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

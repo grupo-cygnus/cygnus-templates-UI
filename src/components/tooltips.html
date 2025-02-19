@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Tooltips</h1>
+                <p class="mt-4 text-gray-600 text-md">Un Tooltip es un pequeño elemento emergente que aparece cuando el
+                    usuario mueve el puntero del ratón sobre un elemento.
+                    Úselo
+                    cuando desee especificar información adicional sobre algo cuando el usuario mueve el puntero del
+                    ratón sobre un
+                    elemento.</p>
+            </header>
+
+            <!-- Popover simple -->
+            <section id="simple-tooltip">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tooltip predeterminado</h2>
+                        <p class="mb-8 text-gray-600 text-md">Puedes inicializar nuevo tooltip
+                            agregando el atributo de datos <code class="code">data-tooltip-target="{tooltipName}"</code>
+                            al elemento desencadenador y
+                            al elemento que desea utilizar como información sobre
+                            herramientas. <code class="code">data-tooltip-target="{tooltipName}"</code> <code
+                                class="code">data-tooltip="{tooltipName}"</code></p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <button data-ripple-light="true" data-tooltip-target="tooltip" class=" btn-primary btn-md">
+                                Mostrar Tooltip
+                            </button>
+                            <div data-tooltip="tooltip"
+                                class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                Este es un Tooltip
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;button data-ripple-light="true" data-tooltip-target="tooltip" class=" btn-primary btn-md"&gt;
+    Mostrar Tooltip
+&lt;/button&gt;
+&lt;div data-tooltip="tooltip"
+    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"&gt;
+    Este es un Tooltip
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Popover simple -->
+            <section id="tooltip-position">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Posición de los tooltips</h2>
+                        <p class="mb-8 text-gray-600 text-md">Puede cambiar la posición del tooltip en relación con su
+                            elemento desencadenante agregando el
+                            atributo de datos al elemento de información sobre herramientas . De manera predeterminada,
+                            está configurado en .
+                            Verifique los valores de ubicación de la información sobre herramientas aquí
+                            . <code class="code">data-tooltip-placement="{top}"</code> <code class="code">top</code></p>
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="flex gap-3 mb-3">
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-top"
+                                    class=" btn-primary btn-md">
+                                    Top
+                                </button>
+                                <div data-tooltip="tooltip-top" data-tooltip-placement="top"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip TOP
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-top-start"
+                                    class=" btn-primary btn-md">
+                                    Top Start
+                                </button>
+                                <div data-tooltip="tooltip-top-start" data-tooltip-placement="top-start"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip TOP START
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-top-end"
+                                    class=" btn-primary btn-md">
+                                    Top End
+                                </button>
+                                <div data-tooltip="tooltip-top-end" data-tooltip-placement="top-end"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip TOP END
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-right"
+                                    class=" btn-primary btn-md">
+                                    Right
+                                </button>
+                                <div data-tooltip="tooltip-right" data-tooltip-placement="right"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip RIGHt
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-right-start"
+                                    class=" btn-primary btn-md">
+                                    Right Start
+                                </button>
+                                <div data-tooltip="tooltip-right-start" data-tooltip-placement="right-start"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip RIGHT START
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-right-end"
+                                    class=" btn-primary btn-md">
+                                    Right End
+                                </button>
+                                <div data-tooltip="tooltip-right-end" data-tooltip-placement="right-end"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip RIGHT END
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-bottom"
+                                    class=" btn-primary btn-md">
+                                    Bottom
+                                </button>
+                                <div data-tooltip="tooltip-bottom" data-tooltip-placement="bottom"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip BOTTOM
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-bottom-start"
+                                    class=" btn-primary btn-md">
+                                    Bottom Start
+                                </button>
+                                <div data-tooltip="tooltip-bottom-start" data-tooltip-placement="bottom-start"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip BOTTOM START
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-bottom-end"
+                                    class=" btn-primary btn-md">
+                                    Bottom End
+                                </button>
+                                <div data-tooltip="tooltip-bottom-end" data-tooltip-placement="bottom-end"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip BOTTOM END
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-left"
+                                    class=" btn-primary btn-md">
+                                    Left
+                                </button>
+                                <div data-tooltip="tooltip-left" data-tooltip-placement="left"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip LEFT
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-left-start"
+                                    class=" btn-primary btn-md">
+                                    Left Start
+                                </button>
+                                <div data-tooltip="tooltip-left-start" data-tooltip-placement="left-start"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip LEFT START
+                                </div>
+                                <button data-ripple-light="true" data-tooltip-target="tooltip-left-end"
+                                    class=" btn-primary btn-md">
+                                    Left End
+                                </button>
+                                <div data-tooltip="tooltip-left-end" data-tooltip-placement="left-end"
+                                    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none">
+                                    Tooltip LEFT END
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;button data-ripple-light="true" data-tooltip-target="tooltip" class=" btn-primary btn-md"&gt;
+    Mostrar Tooltip
+&lt;/button&gt;
+&lt;div data-tooltip="tooltip"
+    class="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"&gt;
+    Este es un Tooltip
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-tooltip" class="block pb-1 btn-link">Tooltip predeterminado</a></li>
+                <li><a href="#tooltip-position" class="block pb-1 btn-link">Posición de los tooltips</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script type="module" src="../js/tooltip.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Buttons */
+/* Clase base común para todos los botones */
+/* .btn {
+  @apply flex items-center justify-center text-sm font-medium rounded-lg transition-all;
+} */
+
+/* Prioridad: Botón primario */
+@layer base {
+  /* Aquí irían tus estilos base globales */
+}
+
+@layer components {
+  /* BUTTONS */
+  .btn {
+    @apply flex items-center justify-center text-sm font-medium rounded-lg transition-all shadow-sm;
+  }
+
+  /* Prioridad: Botón primario */
+  /* .btn-primary {
+    @apply flex items-center justify-center py-2.5 px-4 text-sm font-medium rounded-lg transition-all text-white bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-300 focus:outline-none active:bg-primary-700;
+  } */
+  .btn-primary {
+    @apply btn text-white bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-300 focus:outline-none active:bg-primary-700;
+  }
+
+  /* Prioridad: Botón secundario */
+  .btn-secondary {
+    @apply flex items-center justify-center py-2.5 px-4 text-sm font-medium rounded-lg transition-all text-secondary-700 border border-secondary-300 hover:bg-secondary-100 hover:border-secondary-300 focus:ring-2 focus:ring-secondary-300 focus:outline-none active:bg-secondary-100 active:text-white;
+  }
+
+  /* Prioridad: Botón terciario */
+  .btn-tertiary {
+    @apply flex items-center justify-center py-2.5 px-4 text-sm font-medium transition-all border border-transparent rounded-lg text-primary-600 hover:bg-primary-50 focus:bg-primary-50 active:bg-primary-50 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  .spin-loading {
+    @apply animate-spin inline-block size-4 border-[3px] border-current border-t-transparent text-white rounded-full;
+  }
+
+  .avatar-simple {
+    @apply relative inline-flex items-center justify-center w-10 h-10 overflow-hidden rounded-full bg-secondary-200;
+  }
+
+  /* Prioridad: Enlace */
+  .btn-link {
+    @apply flex items-center justify-center text-sm font-medium text-primary-500 no-underline hover:text-primary-700 active:underline hover:underline;
+  }
+
+  /* Tamaños */
+  .btn-sm {
+    @apply py-2 px-3.5 text-xs;
+  }
+
+  .btn-md {
+    @apply py-2.5 px-4 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-4.5 py-2.5 text-base;
+  }
+
+  .btn-xl {
+    @apply px-5 py-3 text-base;
+  }
+
+  .btn-2xl {
+    @apply px-7 py-4 text-lg;
+  }
+
+  /* Botón ancho completo */
+  .btn-block {
+    @apply w-full;
+  }
+
+  /* Botón con ícono */
+  .btn-icon {
+    @apply w-max flex items-center gap-2; /* Espaciado uniforme entre ícono y texto */
+  }
+
+  /* Botón solo con ícono */
+  .btn-icon-only {
+    @apply rounded-md bg-primary-500 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-500 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none focus:ring-2 focus:ring-primary-300;
+  }
+
+  .btn-icon-only-secondary {
+    @apply rounded-md bg-white p-2.5 border border-secondary-300 text-center text-sm text-secondary-500 transition-all shadow-sm hover:bg-secondary-100 hover:border-secondary-300 hover:shadow-lg focus:ring-2 focus:ring-secondary-300 focus:outline-none focus:shadow-none active:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  .btn-icon-only-tertiary {
+    @apply rounded-md border text-secondary-600 border-transparent p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg hover:bg-primary-50 hover:text-primary-500 focus:text-primary-500 focus:bg-primary-50 active:bg-primary-50 active:text-primary-500  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  /* Grupo de botones */
+  .btn-group-left {
+    @apply px-4 py-2 text-sm text-center transition-all border border-r-0 rounded-md rounded-r-none shadow-sm border-secondary-300 hover:shadow-lg text-secondary-600 hover:text-secondary-600 hover:bg-secondary-200 hover:border-secondary-300 focus:bg-secondary-200 focus:border-secondary-300 active:border-secondary-300  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  .btn-group-middle {
+    @apply px-4 py-2 text-sm text-center transition-all border rounded-md rounded-l-none rounded-r-none shadow-sm border-secondary-300 hover:shadow-lg text-secondary-600 hover:text-secondary-600 hover:bg-secondary-200 hover:border-secondary-300 focus:bg-secondary-200 focus:border-secondary-300 active:border-secondary-300  active:bg-secondary-300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  .btn-group-right {
+    @apply px-4 py-2 text-sm text-center transition-all border border-l-0 rounded-md rounded-l-none shadow-sm border-secondary-300 hover:shadow-lg text-secondary-600 hover:text-secondary-600 hover:bg-secondary-200 hover:border-secondary-300  focus:bg-secondary-200 focus:border-secondary-300 active:border-secondary-300  active:bg-secondary-300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  .btn-search {
+    @apply absolute flex items-center py-1 transition-all border rounded shadow-sm btn-primary btn-sm top-1 right-1 hover:shadow disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  }
+
+  /* Tamaño ícono por defecto */
+  .icon {
+    @apply w-6 h-6; /* Tamaño de 20px */
+  }
+
+  /* Botón deshabilitado */
+  .btn-disabled {
+    @apply pointer-events-none opacity-50;
+  }
+
+  /* Botón sin borde */
+  .btn-borderless {
+    @apply border-none;
+  }
+
+  /* Botón con sombra adicional */
+  .btn-shadow-lg {
+    @apply shadow-lg hover:shadow-xl focus:shadow-none;
+  }
+
+  /* Botón en estado de carga */
+  .btn-loading {
+    @apply pointer-events-none opacity-50;
+  }
+
+  /* ICONS */
+  /* Tallas de iconos */
+  .icon-sm {
+    @apply w-4 h-4; /* 16px */
+  }
+
+  .icon-md {
+    @apply w-6 h-6; /* 20px - tamaño por defecto */
+  }
+
+  .icon-lg {
+    @apply w-8 h-8; /* 24px */
+  }
+
+  .icon-xl {
+    @apply w-10 h-10; /* 40px */
+  }
+
+  /* INPUTS */
+  .input-default {
+    @apply block w-full text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-500 text-secondary-700 border-secondary-200 focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:shadow;
+  }
+
+  .input-sm {
+    @apply px-3;
+  }
+
+  .input-md {
+    @apply px-4 py-3;
+  }
+
+  .input-lg {
+    @apply p-4;
+  }
+
+  .input-group {
+    @apply w-full text-sm transition duration-300 bg-transparent border shadow-sm placeholder:text-secondary-500 text-secondary-700 border-secondary-200 focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:shadow rounded-r-lg;
+  }
+
+  .input-interactive {
+    @apply w-full px-4 py-3 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-500 text-secondary-700 border-secondary-200  focus:outline-none focus:border-primary-400 hover:border-secondary-300 focus:shadow;
+  }
+
+  .label-interactive {
+    @apply absolute cursor-text bg-white px-1 left-2.5 top-3 text-secondary-600 text-sm transition-all transform origin-left peer-placeholder-shown:top-3 peer-placeholder-shown:text-sm peer-placeholder-shown:text-secondary-600 peer-focus:-top-2 peer-focus:left-2.5 peer-focus:text-xs peer-focus:text-secondary-600 peer-focus:scale-90;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .label-input {
+    @apply block mb-1 text-sm font-semibold text-secondary-600;
+  }
+
+  .hint-text {
+    @apply mt-1 text-sm text-secondary-500;
+  }
+
+  .input-disabled {
+    @apply bg-gray-100 text-gray-400 cursor-not-allowed;
+  }
+
+  /* CHECKBOXES */
+  .checkbox-box {
+    @apply relative flex items-center cursor-pointer gap-2;
+  }
+
+  .checkbox-input {
+    @apply w-6 h-6 transition-all border rounded shadow appearance-none cursor-pointer hover:shadow-md border-secondary-300 checked:bg-primary-500 checked:border-primary-500;
+  }
+
+  .checkbox-text {
+    @apply inline-flex flex-col items-start justify-start grow shrink basis-0;
+  }
+
+  .checkbox-label {
+    @apply text-base text-secondary-700 font-medium block;
+  }
+
+  /* .hint-text {
+    @apply text-base text-secondary-500 font-medium;
+  } */
+
+  /* Estilo base del checkbox */
+
+  .peer-disabled .checkbox-box {
+    @apply bg-gray-200 border-gray-300 cursor-not-allowed;
+  }
+
+  .peer-focus .checkbox-box {
+    @apply ring-2 ring-primary-300;
+  }
+
+  /* Tamaños personalizados */
+  .checkbox-sm .checkbox-box {
+    @apply w-4 h-4;
+  }
+
+  .checkbox-lg .checkbox-box {
+    @apply w-6 h-6;
+  }
+
+  /* RADIOBUTTONS */
+
+  /* Base del radio */
+  .radio-box {
+    @apply flex items-center justify-center w-6 h-6 border-2 border-secondary-300 rounded-full cursor-pointer transition-all;
+  }
+
+  /* Círculo interno del radio */
+  .radio-inner {
+    @apply hidden w-3 h-3 bg-white rounded-full peer-checked:block;
+  }
+
+  /* Input base */
+  .radio-input {
+    @apply hidden; /* Oculta el input */
+  }
+
+  /* Etiqueta del radio */
+  .radio-label {
+    @apply text-base font-medium text-secondary-700;
+  }
+
+  /* Descripción secundaria */
+  .radio-description {
+    @apply text-xs text-secondary-500;
+  }
+
+  /* Estados del radio */
+  .peer-checked .radio-box {
+    @apply bg-primary-500 border-primary-500; /* Fondo azul y borde al seleccionarse */
+  }
+
+  .peer-focus .radio-box {
+    @apply ring-2 ring-primary-300; /* Anillo al enfocarse */
+  }
+
+  .peer-disabled .radio-box {
+    @apply bg-gray-200 border-gray-300 cursor-not-allowed; /* Estilo deshabilitado */
+  }
+
+  .peer-disabled .radio-label {
+    @apply text-gray-400; /* Texto gris para estado deshabilitado */
+  }
+
+  /* Tamaños personalizados */
+  .radio-sm .radio-box {
+    @apply w-4 h-4; /* Radio pequeño */
+  }
+
+  .radio-lg .radio-box {
+    @apply w-8 h-8; /* Radio grande */
+  }
+
+  /* BADGES */
+
+  .bagde-xs {
+    @apply rounded-full bg-secondary-100 py-0.5 px-2.5 border border-transparent text-xs text-secondary-700 transition-all shadow-sm;
+  }
+
+  .badge-md {
+    @apply rounded-full bg-secondary-100 py-0.5 px-2.5 border border-transparent text-sm text-secondary-700 transition-all shadow-sm;
+  }
+
+  .bagde-lg {
+    @apply px-3 py-1 text-sm transition-all border-transparent rounded-full shadow-sm text-secondary-600 bg-secondary-100;
+  }
+
+  .badge-primary {
+    @apply text-sm transition-all border-transparent rounded-full shadow-sm text-primary-600 bg-primary-100 text-center;
+  }
+
+  .badge-secondary {
+    @apply text-sm transition-all border-transparent rounded-full shadow-sm text-secondary-600 bg-secondary-100 text-center;
+  }
+
+  .badge-error {
+    @apply text-sm transition-all border-transparent rounded-full shadow-sm text-error-600 bg-error-100 text-center;
+  }
+
+  .badge-warning {
+    @apply text-sm transition-all border-transparent rounded-full shadow-sm text-warning-600 bg-warning-100 text-center;
+  }
+
+  .badge-success {
+    @apply text-sm transition-all border-transparent rounded-full shadow-sm text-success-600 bg-success-100 text-center;
+  }
+
+  .badge-icon {
+    @apply inline-flex items-center justify-center gap-1.5 text-sm py-1 px-2.5 rounded-full w-max text-secondary-700 bg-secondary-100 me-2;
+  }
+  .badge-icon-only {
+    @apply inline-flex items-center justify-center text-sm font-semibold rounded-full w-7 h-7 text-secondary-700 bg-secondary-100 me-2;
+  }
+
+  /* Alerts */
+  .alert {
+    @apply relative flex w-full p-3 mt-3 text-sm border rounded-md text-primary-600 bg-primary-25 border-primary-300;
+  }
+
+  /* SELECTS */
+  .select-xs {
+    @apply w-full bg-transparent placeholder:text-secondary-400 text-secondary-700 text-sm border border-secondary-200 rounded pl-3 pr-8 py-1.5 transition duration-300 focus:outline-none focus:border-secondary-400 hover:border-secondary-400 shadow-sm focus:shadow-md appearance-none cursor-pointer;
+  }
+
+  .select-md {
+    @apply w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md;
+  }
+
+  .select-lg {
+    @apply w-full py-3 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md;
+  }
+  .dropdown-menu {
+    @apply min-w-[150px] w-full mt-10 overflow-hidden bg-white border rounded-md shadow-lg border-secondary-200 absolute left-0 z-10;
+  }
+
+  /* POPOVERS */
+  .popover {
+    @apply absolute p-4 font-sans text-sm font-normal break-words whitespace-normal bg-white border rounded-lg shadow-lg w-max border-secondary-50 text-secondary-500 shadow-secondary-500/10 focus:outline-none;
+  }
+
+  .card {
+    @apply flex flex-col bg-white border rounded-lg shadow-sm;
+  }
+}
+
+@layer utilities {
+  /* Aquí irían las utilidades personalizadas adicionales */
+  .code {
+    @apply rounded-md px-1 font-normal bg-secondary-700/[0.1] text-gray-900 text-sm;
+  }
+}
+
+/* Ejemplo adicional de scroll personalizado */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* Color del thumb */
+  border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #f3f4f6; /* Color del track */
+}
+
+/* fixed width only on sm and up */
+@media (min-width: 640px) {
+  .w-fixed {
+    flex: 0 1 230px;
+    min-width: 230px;
+  }
+}
+
+pre.language-html {
+  padding-left: 1rem !important; /* Asegura el padding a la izquierda */
+  background: #1e293b; /* Fondo consistente */
+  overflow-x: auto; /* Asegura desplazamiento horizontal si es necesario */
+}
+
+code.language-html {
+  display: block; /* Asegura que el texto del código ocupe todo el ancho */
+  white-space: pre; /* Preserva espacios en blanco */
+}
+
+pre.language-html code {
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+  white-space: pre !important; /* Preserva los espacios */
+}
+
+pre.language-html,
+code.language-html {
+  padding-left: 1rem !important; /* Fuerza el padding */
+  margin-left: 0 !important; /* Elimina márgenes */
+  margin-bottom: 0 !important; /* Elimina márgenes */
+}

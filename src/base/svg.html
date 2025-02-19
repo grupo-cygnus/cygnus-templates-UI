@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Uso de SVGs</h1>
+                <p class="mt-4 text-gray-600 text-md">Los SVGs son elementos gráficos escalables que se pueden
+                    personalizar fácilmente para adaptarse a diferentes
+                    necesidades. En este proyecto, se siguen estas prácticas recomendadas para garantizar consistencia y
+                    personalización:
+                </p>
+            </header>
+
+            <!-- Badge simple -->
+            <section id="simple-badge">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Prácticas Recomendadas</h2>
+                        <ul class="mt-4 text-gray-600 list-disc list-inside text-md">
+                            <li>Aplicar las clases <code>w-5</code> y <code>h-5</code> para definir el tamaño de los
+                                íconos.</li>
+                            <li>Utilizar el atributo <code>stroke="currentColor"</code> para heredar el color del texto
+                                padre.</li>
+                            <li>Evitar incluir los atributos <code>width</code> y <code>height</code> directamente en
+                                los
+                                SVGs.</li>
+                            <li>Importar los SVGs como componentes o directamente en el HTML según la necesidad.</li>
+                        </ul>
+
+                        <h3 class="mt-4 text-xl font-semibold text-gray-800">Ejemplo de Uso</h3>
+                        <p class="mt-2 text-gray-600 text-md">A continuación, se muestra un ejemplo de cómo usar un SVG
+                            correctamente:</p>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"&gt;
+&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /&gt;
+&lt;/svg&gt;
+                        </code>
+                    </pre>
+
+                    <div class="p-4 pb-4">
+
+                        <p class="mt-4 text-gray-600 text-md">Este ejemplo crea un SVG con un tamaño de 20px (definido
+                            por <code>w-5</code> y
+                            <code>h-5</code>) y hereda el color del contenedor padre.
+                        </p>
+
+                        <!-- Sección: Ejemplo con Cambios de Tamaño -->
+                        <div class="mt-8">
+                            <h2 class="text-xl font-semibold text-gray-800">Ejemplo con Cambios de Tamaño</h2>
+                            <p class="mt-2 text-gray-600 text-md">Puedes ajustar el tamaño del SVG usando clases
+                                utilitarias de TailwindCSS:</p>
+                            <div class="flex gap-4 mt-4">
+                                <div>
+                                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    <p class="mt-2 text-xs text-center text-gray-600">w-4 h-4</p>
+                                </div>
+                                <div>
+                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    <p class="mt-2 text-xs text-center text-gray-600">w-6 h-6</p>
+                                </div>
+                                <div>
+                                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    <p class="mt-2 text-xs text-center text-gray-600">w-8 h-8</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección: Notas Adicionales -->
+                        <div class="mt-8">
+                            <h2 class="text-xl font-semibold text-gray-800">Notas Adicionales</h2>
+                            <p class="mt-2 text-gray-600 text-md">
+                                Para un mejor rendimiento, se pueden optimizar los SVGs antes de incluirlos en el
+                                proyecto usando
+                                herramientas como <a href="https://github.com/svg/svgo"
+                                    class="text-blue-600 hover:underline" target="_blank">SVGO</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <!-- <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-badge" class="block pb-1 btn-link">Badge simple</a></li>
+                <li><a href="#badge-size" class="block pb-1 btn-link">Tamaños de badges</a></li>
+                <li><a href="#badge-icons" class="block pb-1 btn-link">Badges con iconos</a></li>
+                <li><a href="#badge-colors" class="block pb-1 btn-link">Colores de badges</a></li>
+                <li><a href="#badge-dismissible" class="block pb-1 btn-link">Badges descartables</a></li>
+                <li><a href="#badge-status" class="block pb-1 btn-link">Estado de badges</a></li>
+            </ul>
+        </aside> -->
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script>
+        function closeAlert() {
+            const chipElement = document.getElementById('chip');
+            chipElement.style.display = 'none'; // Hide the chip
+        }
+    </script>
+</body>
+
+</html>

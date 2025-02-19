@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Popovers</h1>
+                <p class="mt-4 text-gray-600 text-md">Popopovers sirven para mostrar información adicional, contexto o
+                    controles relacionados con un elemento o una acción. Los elementos
+                    emergentes se pueden activar mediante diversas interacciones del usuario, como hacer clic en un
+                    botón, pasar el cursor
+                    sobre un enlace de texto o centrarse en un campo de entrada.
+
+                    Los elementos emergentes son útiles para crear una interfaz de usuario más limpia y ordenada, ya que
+                    ocultan información
+                    secundaria u opciones hasta que se las necesita. Suelen utilizarse para información sobre
+                    herramientas, menús
+                    desplegables, menús de opciones, mensajes de validación de formularios y más.</p>
+            </header>
+
+            <!-- Popover simple -->
+            <section id="simple-popover">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Popover simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Comenzamos con este ejemplo de badge simple que viene con
+                            un
+                            botón de notificación y un pequeño indicador de la
+                            cantidad de notificaciones en las que se puede hacer clic para interactuar con ellas.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <button data-ripple-light="true" data-popover-target="popover"
+                                class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                Mostrar Popover
+                            </button>
+                            <div data-popover="popover" class="popover">
+                                Esta es un muy hermoso y simple popover.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;button data-ripple-light="true" data-popover-target="popover"
+    class="select-none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+    Mostrar Popover
+&lt;/button&gt;
+&lt;div data-popover="popover"
+    class="absolute p-4 font-sans text-sm font-normal break-words whitespace-normal bg-white border rounded-lg shadow-lg w-max border-blue-gray-50 text-blue-gray-500 shadow-blue-gray-500/10 focus:outline-none"&gt;
+    Esta es un muy hermoso y simple popover.
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Popover position -->
+            <section id="position-popover">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Colocación de los popovers</h2>
+                        <p class="mb-8 text-gray-600 text-md">Comenzamos con este ejemplo de badge simple que viene con
+                            un
+                            botón de notificación y un pequeño indicador de la
+                            cantidad de notificaciones en las que se puede hacer clic para interactuar con ellas.</p>
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="flex gap-3 mb-3">
+
+                                <!-- POPOVER TOP -->
+                                <button data-ripple-light="true" data-popover-target="popover-top"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER TOP
+                                </button>
+                                <div data-popover="popover-top" data-popover-placement="top" class="popover">
+                                    Este es un popover top
+                                </div>
+
+                                <!-- POPOVER TOP START -->
+                                <button data-ripple-light="true" data-popover-target="popover-top-start"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER TOP START
+                                </button>
+                                <div data-popover="popover-top-start" data-popover-placement="top-start"
+                                    class="popover">
+                                    Este es un popover top start
+                                </div>
+                                <button data-ripple-light="true" data-popover-target="popover-top-end"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER TOP END
+                                </button>
+
+                                <!-- POPOVER TOP END -->
+                                <div data-popover="popover-top-end" data-popover-placement="top-end" class="popover">
+                                    Este es un popover top end
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+
+                                <!-- POPOVER RIGHT -->
+                                <button data-ripple-light="true" data-popover-target="popover-right"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER RIGHT
+                                </button>
+                                <div data-popover="popover-right" data-popover-placement="right" class="popover">
+                                    Este es un popover right
+                                </div>
+
+                                <!-- POPOVER RIGHT START -->
+                                <button data-ripple-light="true" data-popover-target="popover-right-start"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER RIGHT START
+                                </button>
+                                <div data-popover="popover-right-start" data-popover-placement="right-start"
+                                    class="popover">
+                                    Este es un popover right start
+                                </div>
+
+                                <!-- POPOVER RIGHT END -->
+                                <button data-ripple-light="true" data-popover-target="popover-right-end"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER RIGHT END
+                                </button>
+                                <div data-popover="popover-right-end" data-popover-placement="right-end"
+                                    class="popover">
+                                    Este es un popover right end
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+
+                                <!-- POPOVER BOTTOM -->
+                                <button data-ripple-light="true" data-popover-target="popover-bottom"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER BOTTOM
+                                </button>
+                                <div data-popover="popover-bottom" data-popover-placement="bottom" class="popover">
+                                    This is a very beautiful popover, show some love.
+                                </div>
+
+                                <!-- POPOVER BOTTOM START -->
+                                <button data-ripple-light="true" data-popover-target="popover-bottom-start"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER BOTTOM START
+                                </button>
+                                <div data-popover="popover-bottom-start" data-popover-placement="bottom-start"
+                                    class="popover">
+                                    Este es un popover bottom start
+                                </div>
+
+                                <!-- POPOVER BOTTOM END -->
+                                <button data-ripple-light="true" data-popover-target="popover-bottom-end"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER BOTTOM END
+                                </button>
+                                <div data-popover="popover-bottom-end" data-popover-placement="bottom-end"
+                                    class="popover">
+                                    Este es un popover bottom end
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+
+                                <!-- POPOVER LEFT -->
+                                <button data-ripple-light="true" data-popover-target="popover-left"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER LEFT
+                                </button>
+                                <div data-popover="popover-left" data-popover-placement="left" class="popover">
+                                    Este es un popover left
+                                </div>
+
+                                <!-- POPOVER LEFT START -->
+                                <button data-ripple-light="true" data-popover-target="popover-left-start"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER LEFT START
+                                </button>
+                                <div data-popover="popover-left-start" data-popover-placement="left-start"
+                                    class="popover">
+                                    Este es un popover left start
+                                </div>
+
+                                <!-- POPOVER LEFT END -->
+                                <button data-ripple-light="true" data-popover-target="popover-left-end"
+                                    class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    POPOVER LEFT END
+                                </button>
+                                <div data-popover="popover-left-end" data-popover-placement="left-end" class="popover">
+                                    Este es un popover left end
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;div class="flex gap-3 mb-3"&gt;
+
+    &lt;!-- POPOVER TOP --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-top"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER TOP
+    &lt;/button&gt;
+    &lt;div data-popover="popover-top" data-popover-placement="top" class="popover"&gt;
+        Este es un popover top
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER TOP START --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-top-start"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER TOP START
+    &lt;/button&gt;
+    &lt;div data-popover="popover-top-start" data-popover-placement="top-start" class="popover"&gt;
+        Este es un popover top start
+    &lt;/div&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-top-end"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER TOP END
+    &lt;/button&gt;
+
+    &lt;!-- POPOVER TOP END --&gt;
+    &lt;div data-popover="popover-top-end" data-popover-placement="top-end" class="popover"&gt;
+        Este es un popover top end
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex gap-3 mb-3"&gt;
+
+    &lt;!-- POPOVER RIGHT --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-right"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER RIGHT
+    &lt;/button&gt;
+    &lt;div data-popover="popover-right" data-popover-placement="right" class="popover"&gt;
+        Este es un popover right
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER RIGHT START --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-right-start"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER RIGHT START
+    &lt;/button&gt;
+    &lt;div data-popover="popover-right-start" data-popover-placement="right-start" class="popover"&gt;
+        Este es un popover right start
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER RIGHT END --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-right-end"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER RIGHT END
+    &lt;/button&gt;
+    &lt;div data-popover="popover-right-end" data-popover-placement="right-end" class="popover"&gt;
+        Este es un popover right end
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex gap-3 mb-3"&gt;
+
+    &lt;!-- POPOVER BOTTOM --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-bottom"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER BOTTOM
+    &lt;/button&gt;
+    &lt;div data-popover="popover-bottom" data-popover-placement="bottom" class="popover"&gt;
+        This is a very beautiful popover, show some love.
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER BOTTOM START --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-bottom-start"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER BOTTOM START
+    &lt;/button&gt;
+    &lt;div data-popover="popover-bottom-start" data-popover-placement="bottom-start" class="popover"&gt;
+        Este es un popover bottom start
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER BOTTOM END --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-bottom-end"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER BOTTOM END
+    &lt;/button&gt;
+    &lt;div data-popover="popover-bottom-end" data-popover-placement="bottom-end" class="popover"&gt;
+        Este es un popover bottom end
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex gap-3 mb-3"&gt;
+
+    &lt;!-- POPOVER LEFT --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-left"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER LEFT
+    &lt;/button&gt;
+    &lt;div data-popover="popover-left" data-popover-placement="left" class="popover"&gt;
+        Este es un popover left
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER LEFT START --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-left-start"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER LEFT START
+    &lt;/button&gt;
+    &lt;div data-popover="popover-left-start" data-popover-placement="left-start" class="popover"&gt;
+        Este es un popover left start
+    &lt;/div&gt;
+
+    &lt;!-- POPOVER LEFT END --&gt;
+    &lt;button data-ripple-light="true" data-popover-target="popover-left-end"
+        class="text-sm align-middle transition-all rounded-lg shadow-md select-none btn-primary btn-md disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"&gt;
+        POPOVER LEFT END
+    &lt;/button&gt;
+    &lt;div data-popover="popover-left-end" data-popover-placement="left-end" class="popover"&gt;
+        Este es un popover left end
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-popover" class="block pb-1 btn-link">Popopover simple</a></li>
+                <li><a href="#position-popover" class="block pb-1 btn-link">Posición de popovers</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script type="module" src="../js/popover.js"></script>
+</body>
+
+</html>

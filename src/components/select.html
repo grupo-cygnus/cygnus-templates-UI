@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Selects</h1>
+                <p class="mt-4 text-gray-600 text-md">Un componente de selección es un menú desplegable para mostrar
+                    opciones. Utilice el componente de opción cuando haya
+                    menos opciones en total (menos de 5).
+
+                    A continuación nuestro ejemplo de componente "select" que puede utilizar en su proyecto. El ejemplo
+                    viene en diferentes colores y estilos, por lo que puede adaptarlo fácilmente a sus necesidades.
+                </p>
+            </header>
+
+            <section id="select-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este versátil componente Select con 4 opciones
+                            disponibles y diseñado con Tailwind CSS para recopilar
+                            información del usuario. Este ejemplo se adapta perfectamente a los formularios para que los
+                            usuarios puedan elegir un dato.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="select-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tamaños de selects</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este versátil componente Select con 4 opciones
+                            disponibles y diseñado con Tailwind CSS para recopilar
+                            información del usuario. Este ejemplo se adapta perfectamente a los formularios para que los
+                            usuarios puedan elegir un dato.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <select class="select-xs ease">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px] mt-4">
+                                <div class="relative">
+                                    <select class="select-md ease">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px] mt-4">
+                                <div class="relative">
+                                    <select class="select-lg ease">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="select-xs ease"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="w-full max-w-sm min-w-[200px] mt-4"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="seelect-md ease"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="w-full max-w-sm min-w-[200px] mt-4"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="select-lg ease"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Select deshabilitado -->
+            <section id="select-disabled">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select deshabilitado</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ideal para mostrar una opción bloqueada o perroreterminada
+                            en formularios.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <select disabled
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm opacity-50 appearance-none cursor-pointer pointer-events-none placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select disabled
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm opacity-50 appearance-none cursor-pointer pointer-events-none placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+
+            <!-- Select validación -->
+            <section id="select-validation">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select con validación</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ideal para mostrar una opción bloqueada o determinada
+                            en formularios.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer text-error-700 border-error-200 placeholder:text-error-400 ease focus:outline-none focus:border-error-500 hover:border-error-300 focus:shadow">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="w-full max-w-sm min-w-[200px] mt-4">
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer text-success-700 border-success-200 placeholder:text-success-400 ease focus:outline-none focus:border-success-500 hover:border-success-300 focus:shadow">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer text-error-700 border-error-200 placeholder:text-error-400 ease focus:outline-none focus:border-error-500 hover:border-error-300 focus:shadow"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="w-full max-w-sm min-w-[200px] mt-4"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer text-success-700 border-success-200 placeholder:text-success-400 ease focus:outline-none focus:border-success-500 hover:border-success-300 focus:shadow"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Select con label -->
+            <section id="select-label">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select con label</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ideal para mostrar una opción bloqueada o determinada
+                            en formularios.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <label class="block mb-1 text-sm text-secondary-800">
+                                    Listado de opciones
+                                </label>
+
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md">
+                                        <option value="optionOne">Opción Uno</option>
+                                        <option value="optionTwo">Opción dos</option>
+                                        <option value="optionThree">Opción tres</option>
+                                        <option value="optionFour">Opción cuatro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;label class="block mb-1 text-sm text-secondary-800"&gt;
+        Listado de opciones
+    &lt;/label&gt;
+
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md"&gt;
+            &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+            &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+            &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+            &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Select con help -->
+            <section id="select-help">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select con texto de ayuda</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ideal para mostrar una opción bloqueada o determinada
+                            en formularios.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md">
+                                        <option value="chile">Chile</option>
+                                        <option value="bucharest">Bucharest</option>
+                                        <option value="london">London</option>
+                                        <option value="washington">Washington</option>
+                                    </select>
+                                </div>
+                                <p class="flex items-center mt-2 text-xs text-secondary-500">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-5 h-5 mr-2"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    Su ubicación nos ayuda a proporcionarle servicios específicos.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md"&gt;
+            &lt;option value="chile"&gt;Chile&lt;/option&gt;
+            &lt;option value="bucharest"&gt;Bucharest&lt;/option&gt;
+            &lt;option value="london"&gt;London&lt;/option&gt;
+            &lt;option value="washington"&gt;Washington&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;p class="flex items-center mt-2 text-xs text-secondary-500"&gt;
+        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-5 h-5 mr-2"
+            xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path
+                d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /&gt;
+        &lt;/svg&gt;
+
+        Su ubicación nos ayuda a proporcionarle servicios específicos.
+    &lt;/p&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Select con label y help -->
+            <section id="select-label-help">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select con label y texto de ayuda</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ideal para mostrar una opción bloqueada o determinada
+                            en formularios.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <label class="block mb-1 text-sm text-slate-800">
+                                    Tu país
+                                </label>
+
+                                <div class="relative">
+                                    <select
+                                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-slate-400 text-slate-700 border-slate-200 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 focus:shadow-md">
+                                        <option value="chile">Chile</option>
+                                        <option value="bucharest">Bucharest</option>
+                                        <option value="london">London</option>
+                                        <option value="washington">Washington</option>
+                                    </select>
+                                </div>
+                                <p class="flex items-center mt-2 text-xs text-slate-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-5 h-5 mr-2">
+                                        <path fill-rule="evenodd"
+                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Su ubicación nos ayuda a proporcionarle servicios específicos.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">
+&lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+    &lt;label class="block mb-1 text-sm text-slate-800"&gt;
+        Tu país
+    &lt;/label&gt;
+
+    &lt;div class="relative"&gt;
+        &lt;select
+            class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm appearance-none cursor-pointer placeholder:text-slate-400 text-slate-700 border-slate-200 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 focus:shadow-md"&gt;
+            &lt;option value="chile"&gt;Chile&lt;/option&gt;
+            &lt;option value="bucharest"&gt;Bucharest&lt;/option&gt;
+            &lt;option value="london"&gt;London&lt;/option&gt;
+            &lt;option value="washington"&gt;Washington&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;p class="flex items-center mt-2 text-xs text-slate-500"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2"&gt;
+            &lt;path fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                clip-rule="evenodd"&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+        Su ubicación nos ayuda a proporcionarle servicios específicos.
+    &lt;/p&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Select con label y help -->
+            <section id="select-width-automatic">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Select con ancho automático</h2>
+                        <p class="mb-8 text-gray-600 text-md">selección automática de ancho con capacidad de respuesta y
+                            opciones personalizables, ideal para formularios que
+                            necesitan campos de entrada dinámicos que se ajusten al tamaño del contenido.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <div class="mt-4">
+                                <div class="relative inline-block">
+                                    <select id="dynamicSelect"
+                                        class="bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer min-w-[50px]"
+                                        onchange="resizeSelect()">
+                                        <option value="brazil">Tengo un problema técnico</option>
+                                        <option value="bucharest">Tengo un problema con una plataforma</option>
+                                        <option value="london">Tengo un problema de red</option>
+                                        <option value="washington">Tengo un problema administrativo
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <script>
+                                function resizeSelect() {
+                                    const select = document.getElementById('dynamicSelect');
+                                    const selectedText = select.options[select.selectedIndex].text;
+                                    const tempDiv = document.createElement('div');
+
+                                    // Temporary div to calculate the width of the selected text
+                                    tempDiv.style.position = 'absolute';
+                                    tempDiv.style.visibility = 'hidden';
+                                    tempDiv.style.whiteSpace = 'nowrap';
+                                    tempDiv.style.fontSize = window.getComputedStyle(select).fontSize;
+                                    tempDiv.innerText = selectedText;
+
+                                    document.body.appendChild(tempDiv);
+                                    select.style.width = tempDiv.offsetWidth + 40 + 'px'; // Adjust the additional width for padding and icon space
+                                    document.body.removeChild(tempDiv);
+                                }
+
+                                // Initial call to resize the select box to the default selected option
+                                document.addEventListener('DOMContentLoaded', resizeSelect);
+                            </script>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                                    <code class="language-html">
+            &lt;div class="w-full max-w-sm min-w-[200px]"&gt;
+                &lt;div class="relative"&gt;
+                    &lt;select disabled
+                        class="w-full py-2 pl-3 pr-8 text-sm transition duration-300 bg-transparent border rounded shadow-sm opacity-50 appearance-none cursor-pointer pointer-events-none placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-400 focus:shadow-md"&gt;
+                        &lt;option value="optionOne"&gt;Opción Uno&lt;/option&gt;
+                        &lt;option value="optionTwo"&gt;Opción dos&lt;/option&gt;
+                        &lt;option value="optionThree"&gt;Opción tres&lt;/option&gt;
+                        &lt;option value="optionFour"&gt;Opción cuatro&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+                                    </code>
+                                </pre>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#select-simple" class="block pb-1 btn-link">Select simple</a></li>
+                <li><a href="#select-size" class="block pb-1 btn-link">Tamaños de selects</a></li>
+                <li><a href="#select-disabled" class="block pb-1 btn-link">Select deshabilitado</a></li>
+                <li><a href="#select-validation" class="block pb-1 btn-link">Select con validación</a></li>
+                <li><a href="#select-validation" class="block pb-1 btn-link">Select con validación</a></li>
+                <li><a href="#select-label" class="block pb-1 btn-link">Select con label</a></li>
+                <li><a href="#select-help" class="block pb-1 btn-link">Select con texto de ayuda</a></li>
+                <li><a href="#select-label-help" class="block pb-1 btn-link">Select con label y texto de ayuda</a>
+                </li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    <!-- <script type="module" src="../js/collapse.js"></script> -->
+
+</body>
+
+</html>

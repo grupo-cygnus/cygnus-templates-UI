@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+            <!-- Título y Descripción -->
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold text-gray-900">Tipografía</h1>
+                <p class="mt-2 text-gray-600 text-md">Explora los estilos de tipografía en nuestro sistema de diseño.
+                </p>
+            </header>
+
+            <!-- Familia de Fuente -->
+            <section class="mb-12">
+                <h2 class="mb-4 text-xl font-bold text-gray-900">Inter</h2>
+                <div class="text-gray-900">
+                    <p class="mb-2 text-6xl font-normal">Ag</p>
+                    <p class="text-lg font-normal uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="text-lg font-normal lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="text-lg font-normal">0123456789 !@#$%^&*()</p>
+                </div>
+            </section>
+
+            <!-- Display Big 2xl -->
+            <section class="mb-12">
+
+                <!-- Big 2xl -->
+                <h2 class="mb-4 text-lg font-semibold text-gray-900">Big 2xl</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 72px | Line height: 90px |
+                    Tracking: -2%
+                </p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 font-normal text-big-2xl">Big 2xl</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 font-medium text-big-2xl">Big 2xl</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 font-semibold text-big-2xl">Big 2xl</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 font-bold text-big-2xl">Big 2xl</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Big xl -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Big xl</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 60px / 3.75rem | Line height: 72px
+                    /
+                    4.625rem |
+                    Tracking:
+                    -2%</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 font-normal text-big-xl">Big xl</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 font-medium text-big-xl">Big xl</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2font-semibold text-big-xl">Big xl</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 font-bold text-big-xl">Big xl</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Big lg -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Big lg</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 48px / 3rem | Line height: 60px /
+                    3.75rem
+                    | Tracking: -2%</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-5xl font-normal">Big lg</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-5xl font-medium">Big lg</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-5xl font-semibold">Big lg</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-5xl font-bold ">Big lg</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Big md -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Big md</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 36px / 2.25rem | Line height: 44px
+                    /
+                    2.75rem | Tracking: -2%</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-4xl font-normal">Big md</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-4xl font-medium">Big md</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-4xl font-semibold">Big md</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-4xl font-bold ">Big md</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Big sm -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Big sm</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 30px / 1.875rem | Line height:
+                    38px /
+                    2.375rem</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-3xl font-normal">Big sm</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-3xl font-medium">Big sm</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-3xl font-semibold">Big sm</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-3xl font-bold ">Big sm</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Big xs -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Big xs</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 24px / 1.5rem | Line height: 32px
+                    / 2rem
+                </p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-xl font-normal">Big xs</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-xl font-medium">Big xs</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-1 text-xl font-semibold mb-2">Big xs</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-xl font-bold ">Big xs</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Text xl -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Text xl</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 20px / 1.25rem | Line height: 30px
+                    /
+                    1.875rem</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-xl font-normal">Text xl</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-xl font-medium">Text xl</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-1 text-xl font-semibold mb-2">Text xl</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-xl font-bold ">Text xl</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Text lg -->
+                <h2 class="mt-6 text-lg font-semibold text-gray-900">Text lg</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 18px / 1.125rem | Line height:
+                    28px /
+                    1.75rem</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-lg font-normal">Text lg</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-lg font-medium">Text lg</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-lg font-semibold">Text lg</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-lg font-bold ">Text lg</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Text md -->
+                <h2 class="mt-6 font-semibold text-gray-900 text-md">Text md</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 16px / 1rem | Line height: 24px /
+                    1.5rem
+                </p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 font-normal text-md">Text md</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 font-medium text-md">Text md</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 font-semibold text-md">Text md</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 font-bold text-md ">Text md</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Text sm -->
+                <h2 class="mt-6 text-sm font-semibold text-gray-900">Text sm</h2>
+                <p class="pb-2 mt-2 mb-1 text-sm text-gray-500 border-b-2">Font size: 14px / 0.875rem | Line height:
+                    20px /
+                    1.25rem</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-sm font-normal">Text sm</p>
+                        <p class="text-sm text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-sm font-medium">Text sm</p>
+                        <p class="text-sm text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-sm font-semibold">Text sm</p>
+                        <p class="text-sm text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-sm font-bold ">Text sm</p>
+                        <p class="text-sm text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+                <!-- Text xs -->
+                <h2 class="mt-6 text-xs font-semibold text-gray-900">Text xs</h2>
+                <p class="pb-2 mt-2 mb-1 text-xs text-gray-500 border-b-2">Font size: 12px / 0.75rem | Line height: 18px
+                    /
+                    1.125rem</p>
+                <div class="grid grid-cols-4 gap-4 mb-6 text-gray-900">
+                    <!-- Regular -->
+                    <div>
+                        <p class="mb-2 text-xs font-normal">Text xs</p>
+                        <p class="text-xs text-gray-600">Regular</p>
+                    </div>
+                    <!-- Medium -->
+                    <div>
+                        <p class="mb-2 text-xs font-medium">Text xs</p>
+                        <p class="text-xs text-gray-600">Medium</p>
+                    </div>
+                    <!-- Semibold -->
+                    <div>
+                        <p class="mb-2 text-xs font-semibold">Text xs</p>
+                        <p class="text-xs text-gray-600">Semibold</p>
+                    </div>
+                    <!-- Bold -->
+                    <div>
+                        <p class="mb-2 text-xs font-bold ">Text xs</p>
+                        <p class="text-xs text-gray-600">Bold</p>
+                    </div>
+                </div>
+                <div class="mt-8"></div>
+
+            </section>
+        </main>
+
+        <!-- Sidebar Right -->
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+</body>
+
+</html>

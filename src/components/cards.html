@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Cards</h1>
+                <p class="mt-4 text-gray-600 text-md">Las "cards" o trajetas de información son deales para
+                    listados de productos y eventos, perfiles de usuario, paneles de control y más.</p>
+            </header>
+
+            <section id="basic-card">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tarjeta básica</h2>
+                        <p class="mb-8 text-gray-600 text-md">Una tarjeta básica que contiene un título, contenido y un
+                            contenido de esquina adicional.
+
+                            Las tarjetas no tienen un ancho específico para comenzar, por lo que tendrán un ancho del
+                            100 % a menos que se indique
+                            lo contrario.</p>
+                        <div class="flex items-center justify-center w-full max-w-xs gap-4 mb-4">
+
+                            <div class="card">
+                                <img class="w-full h-auto rounded-t-lg"
+                                    src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                                    alt="Card Image">
+                                <div class="p-4 md:p-5">
+                                    <h3 class="text-lg font-bold text-secondary-800">
+                                        Titulo de la tarjeta
+                                    </h3>
+                                    <p class="mt-1 text-secondary-500">
+                                        Un texto de ejemplo rápido que se basa en el título de la tarjeta y constituye
+                                        el grueso de su contenido.
+                                    </p>
+                                    <a class="mt-2 btn-primary btn-md w-max" href="#">
+                                        Ir a alguna parte
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="card"&gt;
+    &lt;img class="w-full h-auto rounded-t-lg"
+        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+        alt="Card Image"&gt;
+    &lt;div class="p-4 md:p-5"&gt;
+        &lt;h3 class="text-lg font-bold text-secondary-800"&gt;
+            Titulo de la tarjeta
+        &lt;/h3&gt;
+        &lt;p class="mt-1 text-secondary-500"&gt;
+            Un texto de ejemplo rápido que se basa en el título de la tarjeta y constituye
+            el grueso de su contenido.
+        &lt;/p&gt;
+        &lt;a class="mt-2 btn-primary btn-md w-max" href="#"&gt;
+            Ir a alguna parte
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="body-card">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Cuerpo de tarjeta</h2>
+                        <p class="mb-8 text-gray-600 text-md">Ejemplo de cuerpo simple con texto.</p>
+                        <div class="flex items-center justify-center w-full max-w-xs gap-4 mb-4">
+
+                            <div class="flex flex-col p-4 bg-white border border-gray-200 shadow-sm rounded-xl md:p-5">
+                                Este es un texto dentro del cuerpo de una tarjeta.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div
+    class="flex flex-col p-4 bg-white border border-gray-200 shadow-sm rounded-xl md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"&gt;
+    Este es un texto dentro del cuerpo de una tarjeta.
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="simple-card">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tarjeta sencilla</h2>
+                        <p class="mb-8 text-gray-600 text-md">Una tarjeta simple que solo contiene un área de contenido.
+                        </p>
+                        <div class="flex items-center justify-center w-full max-w-xs gap-4 mb-4">
+
+                            <div class="flex flex-col p-4 bg-white border shadow-sm rounded-xl md:p-5 ">
+                                <h3 class="text-lg font-bold text-gray-800 ">
+                                    Título de la tarjeta
+                                </h3>
+                                <p class="mt-1 text-xs font-medium text-gray-500 uppercase ">
+                                    Subtítulo de la tarjeta
+                                </p>
+                                <p class="mt-2 text-gray-500 ">
+                                    Un texto de ejemplo rápido para ampliar el título de la tarjeta y constituir la
+                                    mayor parte del contenido de la tarjeta.
+                                </p>
+                                <a class="inline-flex items-center mt-3 text-sm font-semibold text-blue-600 border border-transparent rounded-lg gap-x-1 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                    href="#">
+                                    Enlace de tarjeta
+                                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m9 18 6-6-6-6"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="flex flex-col p-4 bg-white border shadow-sm rounded-xl md:p-5 "&gt;
+    &lt;h3 class="text-lg font-bold text-gray-800 "&gt;
+        Título de la tarjeta
+    &lt;/h3&gt;
+    &lt;p class="mt-1 text-xs font-medium text-gray-500 uppercase "&gt;
+        Subtítulo de la tarjeta
+    &lt;/p&gt;
+    &lt;p class="mt-2 text-gray-500 "&gt;
+        Un texto de ejemplo rápido para ampliar el título de la tarjeta y constituir la
+        mayor parte del contenido de la tarjeta.
+    &lt;/p&gt;
+    &lt;a class="inline-flex items-center mt-3 text-sm font-semibold text-blue-600 border border-transparent rounded-lg gap-x-1 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+        href="#"&gt;
+        Enlace de tarjeta
+        &lt;svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+            &lt;path d="m9 18 6-6-6-6"&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#basic-card" class="block pb-1 btn-link">Tarjeta básica</a></li>
+                <li><a href="#body-card" class="block pb-1 btn-link">Cuerpo de tarjeta</a></li>
+                <li><a href="#simple-card" class="block pb-1 btn-link">Tarjeta sencilla</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

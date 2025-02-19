@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <!-- <header class="mb-12">
+                <h1 class="text-4xl font-bold">Acordeón</h1>
+                <p class="mt-4 text-gray-600 text-md">El elemento colapsable sirve para permitir al usuario mostrar y
+                    ocultar secciones de contenido relacionado en una página.
+
+                    Hay muchas formas de utilizar este componente, como mostrar una lista de preguntas frecuentes,
+                    mostrar varios menús y
+                    submenús, mostrar las ubicaciones de una empresa en particular, etc.
+                </p>
+            </header> -->
+
+            <section id="collapse-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Colapsable predeterminado</h2>
+                        <p class="mb-8 text-gray-600 text-md">Usa el componente colapsable CSS Tailwind para permitir al
+                            usuario mostrar y ocultar secciones de contenido
+                            relacionado en una página.
+
+                            Hay muchas formas de utilizar este componente, como mostrar una lista de preguntas
+                            frecuentes, mostrar varios menús y
+                            submenús, mostrar las ubicaciones de una empresa en particular, etc.</p>
+
+                        <!-- Primary -->
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <button data-collapse-target="collapse" class="btn-primary btn-md" type="button">
+                                Abrir Colapsable
+                            </button>
+                            <div data-collapse="collapse"
+                                class="block w-full h-0 overflow-hidden transition-all duration-300 ease-in-out basis-full">
+                                <div
+                                    class="relative flex flex-col w-8/12 mx-auto mt-4 bg-white border rounded-lg shadow-sm border-slate-200">
+                                    <div class="p-4">
+                                        <p class="font-light text-slate-600">
+                                            Utilice este colapsable hecho en Tailwind. Puedes utilizarlo para acordeón,
+                                            elementos plegables y mucho más.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible"&gt;
+
+    &lt;button data-collapse-target="collapse" class="btn-primary" type="button"&gt;
+        Abrir Colapsable
+    &lt;/button&gt;
+    &lt;div data-collapse="collapse"
+        class="block w-full h-0 overflow-hidden transition-all duration-300 ease-in-out basis-full"&gt;
+        &lt;div class="relative flex flex-col w-8/12 mx-auto mt-4 bg-white border rounded-lg shadow-sm border-slate-200"&gt;
+            &lt;div class="p-4"&gt;
+                &lt;p class="font-light text-slate-600"&gt;
+                    Utilice este colapsable hecho en Tailwind. Puedes utilizarlo para acordeón,
+                    elementos plegables y mucho más.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <!-- <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-alert" class="block pb-1 btn-link">Alerta simple</a></li>
+                <li><a href="#alert-icon" class="block pb-1 btn-link">Alerta con ícono</a></li>
+                <li><a href="#alert-colors" class="block pb-1 btn-link">Colores de alertas</a></li>
+                <li><a href="#alert-content" class="block pb-1 btn-link">Alerta con contenido</a></li>
+            </ul>
+        </aside> -->
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    <!-- <script type="module" src="../js/collapse.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Badges</h1>
+                <p class="mt-4 text-gray-600 text-md">Badges (también conocido como Insignias), es un elemento
+                    compacto que representa una entrada, un atributo o una
+                    acción. Este elemento aparece de forma dinámica como un grupo de múltiples elementos interactivos y
+                    permite a los
+                    usuarios introducir información, realizar selecciones, filtrar contenido o activar acciones.
+
+                    A menudo vienen con la capacidad de ser removidos o interactuar con ellos, lo que permite a los
+                    usuarios manipular los
+                    datos o la selección representados por el badge.</p>
+            </header>
+
+            <!-- Badge simple -->
+            <section id="simple-badge">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Badge simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Comenzamos con este ejemplo de badge simple que viene con
+                            un
+                            botón de notificación y un pequeño indicador de la
+                            cantidad de notificaciones en las que se puede hacer clic para interactuar con ellas.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="badge-md">
+                                Badge
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">    
+&lt;div class="badge-md"&gt;
+    Badge
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Badge size -->
+            <section id="badge-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tamaños de badges</h2>
+                        <p class="mb-8 text-gray-600 text-md">En este ejemplo se puede ver cómo implementar badges con
+                            distintos tamaños. Las diferencias de tamaño se logran
+                            principalmente variando los valores de relleno.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="bagde-xs">
+                                Small badge
+                            </div>
+                            <div class="badge-md">
+                                Medium badge
+                            </div>
+                            <div class="bagde-lg">
+                                Large badge
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="bagde-xs"&gt;
+    Small badge
+&lt;/div&gt;
+&lt;div
+    class="bagde-md"&gt;
+    Medium badge
+&lt;/div&gt;
+&lt;div
+    class="bagde-lg"&gt;
+    Large badge
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Badge states -->
+            <section id="badge-colors">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Colores de badges</h2>
+                        <p class="mb-8 text-gray-600 text-md">El componente de badge viene con los 5 estados de color
+                            desde el
+                            color primario, secundario hasta los colores de error, advetencia y éxito.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="badge-primary badge-md">
+                                Badge primario
+                            </div>
+
+                            <div class="badge-secondary badge-md">
+                                Badge secundario
+                            </div>
+
+                            <div class="badge-error badge-md">
+                                Badge error
+                            </div>
+
+                            <div class="badge-warning badge-md">
+                                Badge advertencia
+                            </div>
+
+                            <div class="badge-success badge-md">
+                                Badge éxito
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="badge-primary"&gt;Badge primario&lt;/div&gt;
+
+&lt;div class="badge-secondary"&gt;Badge secundario&lt;/div&gt;
+
+&lt;div class="badge-error"&gt;Badge error&lt;/div&gt;
+
+&lt;div class="badge-warning"&gt;Badge advertencia&lt;/div&gt;
+
+&lt;div class="badge-success"&gt;Badge éxito&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Badge-icons -->
+            <section id="badge-icons">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Badges con iconos</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice el icono para mostrar la indicación.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="flex gap-3">
+
+                                <div class="badge-icon-only">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="sr-only">Icon description</span>
+                                </div>
+
+                                <div class="badge-icon">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Icono a la izquierda
+                                </div>
+
+                                <div class="badge-icon">
+                                    Icono a la derecha
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+    &lt;div class="badge-icon-only"&gt;
+        &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" /&gt;
+        &lt;/svg&gt;
+        &lt;span class="sr-only"&gt;Icon description&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="badge-icon"&gt;
+        &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" /&gt;
+        &lt;/svg&gt;
+        Icono a la izquierda
+    &lt;/div&gt;
+    
+    &lt;div class="badge-icon"&gt;
+        Icono a la derecha
+        &lt;svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" /&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Badge-dismissible -->
+            <section id="badge-dismissible">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Bade descartables</h2>
+                        <p class="mb-8 text-gray-600 text-md">Puedes hacer que un badge sea descartable agregando el
+                            <code class="code">data-dismissible="chipName"</code>atributo de datos al elemento del badge
+                            y el <code class="code">data-dismissible-target="chipName"</code> atributo de datos al
+                            elemento con el que quieres cerrar el chip
+                        </p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div id="badge"
+                                class="relative rounded-md flex bg-secondary-100 py-0.5 pl-2.5 pr-8 border border-transparent text-sm text-secondary-700 transition-all shadow-sm">
+                                Inadmisible
+
+                                <button
+                                    class="flex items-center justify-center transition-all p-1 rounded-md text-secondary-700 hover:bg-white/10 active:bg-white/10 absolute top-0.5 right-0.5"
+                                    type="button" onclick="closeAlert()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4">
+                                        <path
+                                            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <script>
+                                function closeAlert() {
+                                    const chipElement = document.getElementById('badge');
+                                    chipElement.style.display = 'none'; // Hide the chip
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div id="chip"
+    class="relative rounded-md flex bg-secondary-100 py-0.5 pl-2.5 pr-8 border border-transparent text-sm text-secondary-700 transition-all shadow-sm"&gt;
+    Inadmisible
+
+    &lt;button
+        class="flex items-center justify-center transition-all p-1 rounded-md text-secondary-700 hover:bg-white/10 active:bg-white/10 absolute top-0.5 right-0.5"
+        type="button" onclick="closeAlert()"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4"&gt;
+            &lt;path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Badge status -->
+            <section id="badge-status">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Estados de badges</h2>
+                        <p class="mb-8 text-gray-600 text-md">El componente de badge viene con los 5 estados desde el
+                            color primario, secundario hasta los colores de error, advetencia y éxito.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <div class="flex gap-2">
+                                <div
+                                    class="rounded-full flex items-center bg-success-100 py-0.5 px-2.5 border border-transparent text-sm text-success-800 transition-all shadow-sm">
+                                    <div class="block w-2 h-2 mx-auto mr-2 rounded-full bg-success-800"></div>
+                                    Online
+                                </div>
+
+                                <div
+                                    class="rounded-full flex items-center bg-error-100 py-0.5 px-2.5 border border-transparent text-sm text-error-800 transition-all shadow-sm">
+                                    <div class="block w-2 h-2 mx-auto mr-2 rounded-full bg-error-800"></div>
+                                    Offline
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;div class="flex gap-2"&gt;
+    &lt;div
+        class="rounded-full flex items-center bg-green-100 py-0.5 px-2.5 border border-transparent text-sm text-green-800 transition-all shadow-sm"&gt;
+        &lt;div class="block w-2 h-2 mx-auto mr-2 bg-green-800 rounded-full"&gt;&lt;/div&gt;
+        Prendido
+    &lt;/div&gt;
+
+    &lt;div
+        class="rounded-full flex items-center bg-red-100 py-0.5 px-2.5 border border-transparent text-sm text-red-800 transition-all shadow-sm"&gt;
+        &lt;div class="block w-2 h-2 mx-auto mr-2 bg-red-800 rounded-full"&gt;&lt;/div&gt;
+        Apagado
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-badge" class="block pb-1 btn-link">Badge simple</a></li>
+                <li><a href="#badge-size" class="block pb-1 btn-link">Tamaños de badges</a></li>
+                <li><a href="#badge-icons" class="block pb-1 btn-link">Badges con iconos</a></li>
+                <li><a href="#badge-colors" class="block pb-1 btn-link">Colores de badges</a></li>
+                <li><a href="#badge-dismissible" class="block pb-1 btn-link">Badges descartables</a></li>
+                <li><a href="#badge-status" class="block pb-1 btn-link">Estado de badges</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <!-- <script>
+        function closeAlert() {
+            const chipElement = document.getElementById('chip');
+            chipElement.style.display = 'none'; // Hide the chip
+        }
+    </script> -->
+</body>
+
+</html>

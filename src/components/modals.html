@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Modales</h1>
+                <p class="mt-4 text-gray-600 text-md">Se unan las ventanas modales para informar a los usuarios sobre
+                    tareas o información importante que requieren decisiones o
+                    implican múltiples pasos.
+
+                    Un modal es una ventana que muestra información crítica, deshabilita todas las funciones de la
+                    aplicación cuando aparece
+                    y permanece en la pantalla hasta que se Confirmara o se descarta.
+
+                    Vea a continuación nuestros ejemplos modales diseñados con Tailwind CSS que puede usar para sus
+                    aplicaciones web o
+                    móviles.
+
+                    Para inicializar un nuevo modal:
+
+                    Agregar al elemento de activación. Agregar al elemento de fondo. Agregar al elemento modal en
+                    sí <code class="code">.data-dialog-target="{modal}"</code>
+                    <code class="code">data-dialog-backdrop="{modalName}"</code><code
+                        class="code">data-dialog="{modalName}"</code>
+
+                    Asegúrese de que los valores de estos atributos de datos sean los mismos.
+
+                    Para cerrar el modal cuando se hace clic en un elemento, agréguelo data-dialog-close="true"a ese
+                    elemento.
+                </p>
+            </header>
+
+            <section id="modal-simple">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Modal simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Este ejemplo codificado muestra un componente modal;
+                            incluye un botón de activación, un fondo y un estilo personalizable
+                            para el contenido y las acciones del modal. Al hacer clic en el botón "Abrir modal", el
+                            modal se muestra sobre el fondo,
+                            lo que garantiza una interacción enfocada para el usuario. El contenido y el comportamiento
+                            se pueden ajustar fácilmente
+                            para adaptarse a los requisitos de su sitio web.</p>
+
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <!-- Modal -->
+                            <button data-dialog-target="modal" class="btn-primary btn-md" type="button">
+                                Abrir Modal
+                            </button>
+                            <div data-dialog-backdrop="modal" data-dialog-backdrop-close="true"
+                                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                <div data-dialog="modal"
+                                    class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm">
+                                    <div
+                                        class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                        Esta es una simple Modal
+                                    </div>
+                                    <div
+                                        class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                                        reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                        Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                                        dolorum.
+                                    </div>
+                                    <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                        <button data-dialog-close="true"
+                                            class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                            type="button">
+                                            Cancelar
+                                        </button>
+                                        <button data-dialog-close="true"
+                                            class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                            type="button">
+                                            Confirmar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;!-- Modal simple --&gt;
+&lt;button data-dialog-target="modal" class="btn-primary btn-md" type="button"&gt;
+    Abrir Modal
+&lt;/button&gt;
+&lt;div data-dialog-backdrop="modal" data-dialog-backdrop-close="true"
+    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+    &lt;div data-dialog="modal" class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm"&gt;
+        &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+            Esta es una simple Modal
+        &lt;/div&gt;
+        &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+            dolorum.
+        &lt;/div&gt;
+        &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+            &lt;button data-dialog-close="true"
+                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"&gt;
+                Cancelar
+            &lt;/button&gt;
+            &lt;button data-dialog-close="true"
+                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"&gt;
+                Confirmar
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="modal-close">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Modal con cierre equis (X)</h2>
+                        <p class="mb-8 text-gray-600 text-md">Se agrega una ventana modal con cierre equis (X).</p>
+
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <!-- Modal con equis -->
+                            <button data-dialog-target="modal-close" class="btn-primary btn-md" type="button">
+                                Abrir Modal
+                            </button>
+                            <div data-dialog-backdrop="modal-close" data-dialog-backdrop-close="true"
+                                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                <div data-dialog="modal-close"
+                                    class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm">
+                                    <div
+                                        class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                        Esta es una simple Modal con equis
+                                        <button type="button" data-dialog-close="true"
+                                            class="inline-flex items-center justify-center text-gray-800 bg-gray-100 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                                            aria-label="Close" data-hs-overlay="#hs-basic-modal" aria-expanded="true">
+                                            <span class="sr-only">Close</span>
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M18 6 6 18"></path>
+                                                <path d="m6 6 12 12"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                                        reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                        Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                                        dolorum.
+                                    </div>
+                                    <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                        <button data-dialog-close="true"
+                                            class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                            type="button">
+                                            Cancelar
+                                        </button>
+                                        <button data-dialog-close="true"
+                                            class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                            type="button">
+                                            Confirmar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;!-- Modal con equis --&gt;
+&lt;button data-dialog-target="modal-close" class="btn-primary btn-md" type="button"&gt;
+    Abrir Modal
+&lt;/button&gt;
+&lt;div data-dialog-backdrop="modal-close" data-dialog-backdrop-close="true"
+    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+    &lt;div data-dialog="modal-close" class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm"&gt;
+        &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+            Esta es una simple Modal con equis
+            &lt;button type="button" data-dialog-close="true"
+                class="inline-flex items-center justify-center text-gray-800 bg-gray-100 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                aria-label="Close" data-hs-overlay="#hs-basic-modal" aria-expanded="true"&gt;
+                &lt;span class="sr-only"&gt;Close&lt;/span&gt;
+                &lt;svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"&gt;
+                    &lt;path d="M18 6 6 18"&gt;&lt;/path&gt;
+                    &lt;path d="m6 6 12 12"&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+            dolorum.
+        &lt;/div&gt;
+        &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+            &lt;button data-dialog-close="true"
+                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"&gt;
+                Cancelar
+            &lt;/button&gt;
+            &lt;button data-dialog-close="true"
+                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"&gt;
+                Confirmar
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <section id="modal-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tamaños</h2>
+                        <p class="mb-8 text-gray-600 text-md">Se puede configurar el tamaño del modal por nuestra cuenta
+                            usando
+                            las clases CSS de Tailwind. Están creados algunos tamaños
+                            predeterminados. Consulta los ejemplos a continuación para ver los detalles de
+                            implementación.</p>
+                        <div
+                            class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+
+                            <!-- Modal -->
+                            <div class="flex gap-3 mb-3">
+                                <button data-dialog-target="modal-xs" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal XS
+                                </button>
+                                <div data-dialog-backdrop="modal-xs" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-xs"
+                                        class="relative w-1/4 p-4 m-4 bg-white rounded-lg shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button data-dialog-target="modal-sm" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal SM
+                                </button>
+                                <div data-dialog-backdrop="modal-sm" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-sm"
+                                        class="relative w-1/3 p-4 m-4 bg-white rounded-lg shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button data-dialog-target="modal-md" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal MD
+                                </button>
+                                <div data-dialog-backdrop="modal-md" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-md"
+                                        class="relative w-2/5 p-4 m-4 bg-white rounded-lg shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mb-3">
+                                <button data-dialog-target="modal-lg" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal LG
+                                </button>
+                                <div data-dialog-backdrop="modal-lg" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-lg"
+                                        class="relative w-3/5 p-4 m-4 bg-white rounded-lg shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button data-dialog-target="modal-xl" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal XL
+                                </button>
+                                <div data-dialog-backdrop="modal-xl" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-xl"
+                                        class="relative w-3/4 p-4 m-4 bg-white rounded-lg shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button data-dialog-target="dialog-xxl" class=" btn-primary btn-md" type="button">
+                                    Abrir Modal XXL
+                                </button>
+                                <div data-dialog-backdrop="modal-xxl" data-dialog-backdrop-close="true"
+                                    class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                                    <div data-dialog="modal-xxl" class="relative w-screen h-screen bg-white shadow-sm">
+                                        <div
+                                            class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800">
+                                            Esta es una Modal simple
+                                        </div>
+                                        <div
+                                            class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+                                            pariatur
+                                            reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                                            Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam
+                                            quam
+                                            dolorum.
+                                        </div>
+                                        <div class="flex flex-wrap items-center justify-end pt-4 shrink-0">
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Cancelar
+                                            </button>
+                                            <button data-dialog-close="true"
+                                                class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                                type="button">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;!-- Modal --&gt;
+
+&lt;div class="flex gap-3 mb-3"&gt;
+    &lt;button data-dialog-target="modal-xs"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal XS
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-xs" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-xs" class="relative w-1/4 p-4 m-4 bg-white rounded-lg shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button data-dialog-target="modal-sm"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal SM
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-sm" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-sm" class="relative w-1/3 p-4 m-4 bg-white rounded-lg shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button data-dialog-target="modal-md"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal MD
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-md" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-md" class="relative w-2/5 p-4 m-4 bg-white rounded-lg shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex gap-3 mb-3"&gt;
+    &lt;button data-dialog-target="modal-lg"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal LG
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-lg" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-lg" class="relative w-3/5 p-4 m-4 bg-white rounded-lg shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button data-dialog-target="modal-xl"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal XL
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-xl" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-xl" class="relative w-3/4 p-4 m-4 bg-white rounded-lg shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button data-dialog-target="dialog-xxl"
+        class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-secondary-800 hover:shadow-lg focus:bg-secondary-700 focus:shadow-none active:bg-secondary-700 hover:bg-secondary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"&gt;
+        Abrir Modal XXL
+    &lt;/button&gt;
+    &lt;div data-dialog-backdrop="modal-xxl" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"&gt;
+        &lt;div data-dialog="modal-xxl" class="relative w-screen h-screen bg-white shadow-sm"&gt;
+            &lt;div class="flex items-center justify-between pb-4 text-xl font-medium shrink-0 text-secondary-800"&gt;
+                Esta es una Modal simple
+            &lt;/div&gt;
+            &lt;div class="relative py-4 font-light leading-normal border-t border-secondary-200 text-secondary-600"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo pariatur
+                reiciendis voluptates repellendus, eum sunt architecto quam praesentium?
+                Nesciunt velit consequatur reiciendis expedita natus, hic veniam quisquam quam
+                dolorum.
+            &lt;/div&gt;
+            &lt;div class="flex flex-wrap items-center justify-end pt-4 shrink-0"&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 text-sm text-center transition-all border border-transparent rounded-md text-secondary-600 hover:bg-secondary-100 focus:bg-secondary-100 active:bg-secondary-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Cancelar
+                &lt;/button&gt;
+                &lt;button data-dialog-close="true"
+                    class="px-4 py-2 ml-2 text-sm text-center text-white transition-all border border-transparent rounded-md shadow-md bg-primary-600 hover:shadow-lg focus:bg-primary-700 focus:shadow-none active:bg-primary-700 hover:bg-primary-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"&gt;
+                    Confirmar
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#modal-simple" class="block pb-1 btn-link">Modal simple</a></li>
+                <li><a href="#modal-close" class="block pb-1 btn-link">Modal con cierre equis (X)</a></li>
+                <li><a href="#modal-size" class="block pb-1 btn-link">Tamaños</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+    <script type="module" src="../js/dialog.js"></script>
+
+
+</body>
+
+</html>

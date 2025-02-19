@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Botones</h1>
+                <p class="mt-4 text-gray-600 text-md">Los botones son un elemento esencial del diseño web. Básicamente,
+                    son
+                    enlaces con estilo que captan la atención del
+                    usuario. Ayudan a los usuarios a navegar por nuestros sitios web o aplicaciones y los llevan a
+                    realizar una
+                    acción en
+                    particular, como enviar un formulario de contacto o realizar un pedido de la forma más sencilla
+                    posible.
+
+                    Vea a continuación nuestros ejemplos de componentes de botones.</p>
+            </header>
+
+            <section id="simple-button">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Botón simple</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas
+                            redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-center justify-center w-full gap-4 mb-4">
+
+                            <button class="btn-primary btn-md" type="button">Botón simple</button>
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg ">
+                        <code class="language-html">
+&lt;button class="btn-primary btn-md"&gt;Botón md&lt;/button&gt;            
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Botones primarios -->
+            <section id="button-variants">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg pt-6 lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Variantes de Botones</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas
+                            redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-end justify-center w-full gap-4 mb-4">
+                            <button class="btn-primary btn-md" type="button">Botón primario</button>
+                            <button class="btn-secondary btn-md" type="button">Botón secundario</button>
+                            <button class="btn-tertiary btn-md" type="button">Botón terciario</button>
+                            <span class="px-4 py-2.5 block">
+                                <a href="#" class="btn-link">
+                                    Enlace de texto
+                                </a>
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">            
+&lt;button class="btn-primary btn-md"&gt;Botón primario&lt;/button&gt;
+
+&lt;button class="btn-secondary btn-md"&gt;Botón secundario&lt;/button&gt;
+
+&lt;button class="btn-tertiary btn-md"&gt;Botón terciario&lt;/button&gt;
+
+&lt;a href="#" class="btn-link"&gt;Enlace de texto&lt;/a&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Botones secoundarios grises -->
+            <section id="button-size">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Tamaño de botones</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas
+                            redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-end justify-center w-full gap-4 mb-4">
+
+                            <button class="btn-primary btn-sm" type="button">Botón sm</button>
+
+                            <button class="btn-primary btn-md" type="button">Botón md</button>
+
+                            <button class="btn-primary btn-lg" type="button">Botón lg</button>
+
+                            <button class="btn-primary btn-xl" type="button">Botón xl</button>
+
+                            <button class="btn-primary btn-2xl" type="button">Botón 2xl</button>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">
+&lt;button class="btn-primary btn-sm"&gt;Botón sm&lt;/button&gt;
+            
+&lt;button class="btn-primary btn-md"&gt;Botón md&lt;/button&gt;
+
+&lt;button class="btn-primary btn-lg"&gt;Botón lg&lt;/button&gt;
+
+&lt;button class="btn-primary btn-xl"&gt;Botón xl&lt;/button&gt;
+
+&lt;button class="btn-primary btn-2xl"&gt;Botón 2xl&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Botones secoundarios grises -->
+            <section id="button-disabled">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Botón Deshabilitado</h2>
+                        <p class="mb-8 text-gray-600 text-md">Un botón también puede ser un componente a nivel de bloque
+                            que
+                            obtiene todo el espacio disponible en una fila. Puedes
+                            representar un botón como un elemento a nivel de bloque utilizando la clase <code
+                                class="rounded-md px-1 font-['Fira_Code'] font-normal bg-gray-900/[0.1] text-gray-900 text-sm">w-full</code>.class
+                        </p>
+                        <div class="flex items-end w-full gap-4 mb-4">
+                            <div
+                                class="grid w-full py-4 overflow-x-scroll rounded-lg place-items-center lg:overflow-visible">
+
+                                <button class="btn-primary btn-md btn-disabled btn-icon" disabled>
+                                    <svg viewBox="0 0 24 24" fill="none" class="icon"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Botón Deshabilitado
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">
+&lt;button class="btn-primary btn-disabled btn-icon" disabled&gt;
+    &lt;svg viewBox="0 0 24 24" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /&gt;
+    &lt;/svg&gt;
+    Botón Deshabilitado
+&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Botones secoundarios grises -->
+            <section id="button-block">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Botón de bloque</h2>
+                        <p class="mb-8 text-gray-600 text-md">Un botón también puede ser un componente a nivel de bloque
+                            que
+                            obtiene todo el espacio disponible en una fila. Puedes
+                            representar un botón como un elemento a nivel de bloque utilizando la clase <code
+                                class="rounded-md px-1 font-['Fira_Code'] font-normal bg-gray-900/[0.1] text-gray-900 text-sm">w-full</code>.class
+                        </p>
+                        <div class="flex items-end w-full gap-4 mb-4">
+                            <div
+                                class="grid w-full py-4 overflow-x-scroll rounded-lg place-items-center lg:overflow-visible">
+
+                                <button class="btn-block btn-primary btn-lg" type="button">
+                                    Botón de bloque
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">
+&lt;button class="btn-primary btn-block"&gt;Botón de bloque&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                </div>
+            </section>
+
+            <!-- Botones secoundarios grises -->
+            <sectio id="button-icons">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Botones con íconos</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este botón versátil que viene con fondo azul y
+                            texto
+                            blanco, esquinas
+                            redondeadas y un efecto
+                            de sombra al pasar el mouse, mostrando interactividad.</p>
+                        <div class="flex items-start justify-center w-full gap-4 mb-4">
+
+                            <!-- Párrafo + Botón 1 -->
+                            <div class="flex flex-col gap-2">
+                                <button class="btn-primary btn-md btn-icon" type="button">
+                                    <svg viewBox="0 0 24 24" fill="none" class="icon"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Botón con ícono izquierdo
+                                </button>
+                            </div>
+
+
+                            <!-- Párrafo + Botón 2 -->
+                            <div class="flex flex-col gap-2">
+                                <button class="btn-primary btn-md btn-icon" type="button">
+                                    Botón con ícono derecho
+                                    <svg viewBox="0 0 24 24" fill="none" class="icon"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white bg-gray-900 rounded-b-lg">
+                        <code class="language-html">
+
+&lt;button class="btn-primary btn-icon" type="button&gt;
+  &lt;svg viewBox="0 0 24 24" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg"&gt;
+  Botón con ícono izquierdo
+&lt;/button&gt;
+
+&lt;button class="btn-primary btn-icon" type="button&gt;
+  Botón con ícono derecho
+  &lt;svg viewBox="0 0 24 24" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                </div>
+                </section>
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-button" class="block pb-1 btn-link">Botón simple</a></li>
+                <li><a href="#button-variants" class="block pb-1 btn-link">Variantes de botones</a></li>
+                <li><a href="#button-size" class="block pb-1 btn-link">Tamaño de botones</a></li>
+                <li><a href="#button-disabled" class="block pb-1 btn-link">Botón Deshabilitado</a></li>
+                <li><a href="#button-block" class="block pb-1 btn-link">Botón de bloque</a></li>
+                <li><a href="#button-icons" class="block pb-1 btn-link">Botones con íconos</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>

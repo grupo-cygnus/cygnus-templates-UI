@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tailwind Config</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../js/main.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 pt-20 mx-auto mb-4 md:px-6 max-w-7xl lg:grid-cols-12">
+
+        <!-- Sidebar Left -->
+        <aside id="menu"
+            class="hidden lg:block lg:col-span-2 rounded-l-lg bg-white p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-span-1 p-6 bg-white lg:col-span-8">
+
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold">Inputs</h1>
+                <p class="mt-4 text-gray-600 text-md">Los campos de entrada permiten a los usuarios introducir texto
+                    en
+                    una interfaz de usuario. Suelen aparecer en
+                    formularios y cuadros de diálogo. Los campos de entrada en móviles deben tener un tamaño de
+                    texto de
+                    al menos 16px para evitar el zoom automático en los navegadores móviles.</p>
+            </header>
+
+            <!-- Input group -->
+            <section id="input-group">
+                <div
+                    class="grid min-h-[140px] w-full place-items-left overflow-x-scroll rounded-lg lg:overflow-visible border mb-14">
+                    <div class="p-4 pb-4">
+                        <h2 class="mb-2 text-xl font-semibold">Grupo de inputs</h2>
+                        <p class="mb-8 text-gray-600 text-md">Utilice este ejemplo de entrada de teléfono con un ícono
+                            de teléfono a la izquierda de la entrada, agregando una señal
+                            visual para el tipo de entrada requerida.</p>
+                        <div class="flex flex-col items-center justify-center w-full gap-8 mb-4">
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <label class="block mb-1 text-sm text-secondary-600">
+                                    Número de contacto
+                                </label>
+                                <div class="relative">
+                                    <p
+                                        class="absolute inset-y-0 left-0 flex items-center p-2 text-sm text-secondary-600">
+                                        +56 9</p>
+                                    <input id="contactGroup"
+                                        class="w-full py-2 pl-16 pr-3 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+                                        placeholder="123-45 67" pattern="^\+\d{1,3}\s\d{1,3}-\d{3}-\d{4}$"
+                                        title="El número de teléfono debe tener al menos 7 números" maxlength="7"
+                                        required />
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-sm min-w-[200px]">
+                                <label class="block mb-1 text-sm text-secondary-600">
+                                    Número de contacto
+                                </label>
+                                <div class="relative">
+                                    <p
+                                        class="absolute inset-y-0 left-0 flex items-center p-2 text-sm text-secondary-600">
+                                        +56 9
+                                    </p>
+                                    <input id="contactGroup"
+                                        class="w-full py-2 pl-16 pr-3 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-700 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+                                        placeholder="123-45 67" pattern="^\+\d{1,3}\s\d{1,3}-\d{3}-\d{4}$"
+                                        title="El número de teléfono debe tener al menos 7 números" maxlength="7"
+                                        required />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Código -->
+                    <pre class="p-4 pl-4 overflow-auto text-white rounded-b-lg bg-secondary-900 ">
+                        <code class="language-html">
+&lt;div class="relative"&gt;
+    &lt;input type="text"
+        class="w-full py-2 pl-3 pr-10 text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-400 text-secondary-600 border-secondary-200 ease focus:outline-none focus:border-secondary-400 hover:border-secondary-300 focus:shadow"
+        placeholder="Type here..." /&gt;
+
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+        class="absolute w-5 h-5 top-2.5 right-2.5 text-secondary-600"&gt;
+        &lt;path
+            d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"&gt;
+        &lt;/path&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Floating Input -->
+            <div class="relative">
+                <input type="password" id="hs-floating-input-passowrd" class="input-default peer p-4 placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                                        focus:pt-6
+                                                        focus:pb-2
+                                                        [&:not(:placeholder-shown)]:pt-6
+                                                        [&:not(:placeholder-shown)]:pb-2
+                                                        autofill:pt-6
+                                                        autofill:pb-2" placeholder="********">
+                <label for="hs-floating-input-passowrd"
+                    class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                                        peer-focus:scale-90
+                                                        peer-focus:translate-x-0.5
+                                                        peer-focus:-translate-y-1.5
+                                                        peer-focus:text-gray-500
+                                                        peer-[:not(:placeholder-shown)]:scale-90
+                                                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                                        peer-[:not(:placeholder-shown)]:text-gray-500">Contraseña</label>
+            </div>
+            <!-- End Floating Input -->
+
+            <!-- Floating Input -->
+            <div class="relative">
+                <input type="email" id="hs-floating-gray-input-email" class="input-default peer p-4 placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                                    focus:pt-6
+                                                    focus:pb-2
+                                                    [&:not(:placeholder-shown)]:pt-6
+                                                    [&:not(:placeholder-shown)]:pb-2
+                                                    autofill:pt-6
+                                                    autofill:pb-2" placeholder="you@email.com">
+                <label for="hs-floating-gray-input-email" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                                        peer-focus:scale-90
+                                                        peer-focus:translate-x-0.5
+                                                        peer-focus:-translate-y-1.5
+                                                        peer-focus:text-gray-500
+                                                        peer-[:not(:placeholder-shown)]:scale-90
+                                                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                                        peer-[:not(:placeholder-shown)]:text-gray-500">Email</label>
+            </div>
+            <!-- End Floating Input -->
+
+            <!-- Floating Input -->
+            <div class="relative">
+                <input type="password" id="hs-floating-gray-input-passowrd" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                                    focus:pt-6
+                                                    focus:pb-2
+                                                    [&:not(:placeholder-shown)]:pt-6
+                                                    [&:not(:placeholder-shown)]:pb-2
+                                                    autofill:pt-6
+                                                    autofill:pb-2" placeholder="********">
+                <label for="hs-floating-gray-input-passowrd"
+                    class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                                        peer-focus:scale-90
+                                                        peer-focus:translate-x-0.5
+                                                        peer-focus:-translate-y-1.5
+                                                        peer-focus:text-gray-500
+                                                        peer-[:not(:placeholder-shown)]:scale-90
+                                                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                                        peer-[:not(:placeholder-shown)]:text-gray-500">Contraseña</label>
+            </div>
+            <!-- End Floating Input -->
+
+            <!-- Floating Input -->
+            <div class="relative">
+                <input type="email" id="hs-floating-underline-input-email" class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
+                                                    focus:pt-6
+                                                    focus:pb-2
+                                                    [&:not(:placeholder-shown)]:pt-6
+                                                    [&:not(:placeholder-shown)]:pb-2
+                                                    autofill:pt-6
+                                                    autofill:pb-2" placeholder="you@email.com">
+                <label for="hs-floating-underline-input-email" class="absolute top-0 start-0 py-4 px-0 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                                    peer-focus:scale-90
+                                                    peer-focus:translate-x-0.5
+                                                    peer-focus:-translate-y-1.5
+                                                    peer-focus:text-gray-500
+                                                    peer-[:not(:placeholder-shown)]:scale-90
+                                                    peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                                    peer-[:not(:placeholder-shown)]:text-gray-500">Email</label>
+            </div>
+            <!-- End Floating Input -->
+
+            <!-- Floating Input -->
+            <div class="relative">
+                <input type="password" id="hs-floating-underline-input-passowrd" class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
+                                                                            focus:pt-6
+                                                                            focus:pb-2
+                                                                            [&:not(:placeholder-shown)]:pt-6
+                                                                            [&:not(:placeholder-shown)]:pb-2
+                                                                            autofill:pt-6
+                                                                            autofill:pb-2" placeholder="********">
+                <label for="hs-floating-underline-input-passowrd"
+                    class="absolute top-0 start-0 py-4 px-0 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                                                              peer-focus:scale-90
+                                                                              peer-focus:translate-x-0.5
+                                                                              peer-focus:-translate-y-1.5
+                                                                              peer-focus:text-gray-500
+                                                                              peer-[:not(:placeholder-shown)]:scale-90
+                                                                              peer-[:not(:placeholder-shown)]:translate-x-0.5
+                                                                              peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                                                                              peer-[:not(:placeholder-shown)]:text-gray-500">Contraseña</label>
+            </div>
+            <!-- End Floating Input -->
+
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside
+            class="hidden lg:block col-span-2 bg-white rounded-r-lg p-4 sticky top-20 h-[calc(100vh-5rem)] overflow-auto">
+            <h2 class="mb-4 text-sm font-bold">En esta página</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#simple-input" class="block pb-1 btn-link">Input simple</a></li>
+                <li><a href="#input-with-label" class="block pb-1 btn-link">input con label</a></li>
+                <li><a href="#input-with-hint-text" class="block pb-1 btn-link">Texto de ayuda</a></li>
+                <li><a href="#input-interactive" class="block pb-1 btn-link">Label interactivo top</a></li>
+                <li><a href="#input-icon" class="block pb-1 btn-link">Input con iconos</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../js/load-components.js"></script>
+
+</body>
+
+</html>
