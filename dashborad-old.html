@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cygnus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-900 bg-gray-50">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 p-4 bg-white border-r">
+            <div class="flex items-center mb-6 space-x-2">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                    <path
+                        d="M38.0936 20.1227C37.6631 21.2749 35.5756 21.1631 34.4539 21.6647C31.9863 22.7667 30.0413 23.5448 29.9447 24.8103C29.68 28.2687 36.5862 35.4094 33.205 37.7038C29.8245 39.9982 28.4299 26.6205 23.3637 27.5617C18.2996 28.5053 21.9129 38.5878 17.3216 37.6473C12.728 36.7053 20.6667 25.1085 18.5953 21.9519C15.9305 17.8919 9.45201 14.8917 9.80627 12.8157C10.1154 11.0048 11.6275 11.2994 12.0442 11.7552C21.4133 22.0277 34.2077 18.2695 36.724 18.4014C37.975 18.467 38.4471 19.1795 38.0936 20.1227ZM25.0502 10.1445C27.1134 9.69582 29.0657 10.6311 29.4149 12.2327C29.7641 13.8344 28.3768 15.496 26.3129 15.9455C24.2514 16.3942 22.299 15.4597 21.9506 13.8581C21.6015 12.2568 22.9887 10.594 25.0502 10.1449M23.9996 0.000395058C10.7446 0.000395058 0 10.7453 0 24.001C0 37.2567 10.7446 48 23.9996 48C37.2547 48 48 37.2559 48 24.001C48 10.7461 37.2547 0 23.9996 0"
+                        fill="#CC5224" />
+                </svg>
+                <span class="text-lg font-semibold">Cygnus grupo</span>
+            </div>
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                    <span class="mr-3">🏠</span> Inicio
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <span class="mr-3">📊</span> Dashboard
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <span class="mr-3">📢</span> Notificaciones
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <span class="mr-3">📈</span> Analítica
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <span class="mr-3">📄</span> Reportes
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex flex-col flex-1">
+            <!-- Navbar -->
+            <header class="flex items-center justify-between px-6 py-4 bg-white shadow">
+                <div class="relative">
+                    <input type="text" placeholder="Buscar" class="w-64 px-3 py-2 border rounded-lg">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100">☀️</button>
+                    <button class="p-2 rounded-full hover:bg-gray-100">⚙️</button>
+                    <button class="p-2 rounded-full hover:bg-gray-100">🔔</button>
+                    <div class="flex items-center justify-center w-10 h-10 bg-gray-300 rounded-full">JP</div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 p-6">
+                <h1 class="mb-6 text-2xl font-bold">Bienvenido/a al portal de aplicaciones y sistemas.</h1>
+                <p class="mb-8 text-gray-600">Aquí encontrarás acceso rápido a las herramientas esenciales del sistema
+                    Cygnus.</p>
+
+                <!-- Grid de Aplicaciones -->
+                <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="p-4 text-center bg-white rounded-lg shadow">
+                        <div class="text-2xl">🚀</div>
+                        <h2 class="text-lg font-bold">Postula Aquí</h2>
+                        <p class="text-sm text-gray-600">Portal de reclutamiento de Grupo Cygnus.</p>
+                    </div>
+                    <div class="p-4 text-center bg-white rounded-lg shadow">
+                        <div class="text-2xl">📊</div>
+                        <h2 class="text-lg font-bold">Power BI</h2>
+                        <p class="text-sm text-gray-600">Análisis y visualización de datos.</p>
+                    </div>
+                    <div class="p-4 text-center bg-white rounded-lg shadow">
+                        <div class="text-2xl">🛒</div>
+                        <h2 class="text-lg font-bold">Solicitud de compra</h2>
+                        <p class="text-sm text-gray-600">Gestión y aprobación de adquisiciones.</p>
+                    </div>
+                    <div class="p-4 text-center bg-white rounded-lg shadow">
+                        <div class="text-2xl">📄</div>
+                        <h2 class="text-lg font-bold">Control facturas</h2>
+                        <p class="text-sm text-gray-600">Seguimiento de documentos de compra.</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="p-4 mt-auto text-center text-gray-600 bg-white border-t">
+                Grupo Cygnus © 2025 - Argomedo 302, Santiago - contacto@cygnus.cl
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

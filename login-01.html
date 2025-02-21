@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Cygnus</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="src/styles/styles.css" rel="stylesheet">
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-gray-50">
+<body class="flex items-center justify-center min-h-screen bg-gray-50" style="min-height: 100vh;">
     <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
         <div class="flex justify-center mb-4">
             <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
@@ -22,6 +23,14 @@
 
         <form action="#" method="POST" class="space-y-4">
             <div>
+                <label for="rut" class="label-input">RUT</label>
+                <input id="rut" class="input-default input-md" placeholder="12345678K" />
+            </div>
+            <div>
+                <label for="password" class="label-input">Contraseña</label>
+                <input type="password" id="password" class="input-default input-md" placeholder="••••••••" />
+            </div>
+            <!-- <div>
                 <label for="rut" class="text-sm font-medium text-gray-700">RUT</label>
                 <input type="text" id="rut" placeholder="12345678K"
                     class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
@@ -30,11 +39,11 @@
                 <label for="password" class="text-sm font-medium text-gray-700">Contraseña</label>
                 <input type="password" id="password" placeholder="••••••••"
                     class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            </div>
+            </div> -->
             <div class="text-right">
-                <a href="#" class="text-sm text-blue-600 hover:underline">¿Olvidaste tu contraseña?</a>
+                <a href="#" class="justify-end btn-link">¿Olvidaste tu contraseña?</a>
             </div>
-            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Iniciar
+            <button type="submit" class="btn-primary btn-lg btn-block">Iniciar
                 sesión</button>
         </form>
     </div>
