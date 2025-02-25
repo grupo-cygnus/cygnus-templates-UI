@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body class="text-gray-900 bg-gray-100">
+
+    <!-- Contenedor principal -->
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside class="hidden w-64 p-4 bg-white md:block">
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <button
+                            class="flex items-center w-full p-2 font-medium text-gray-700 rounded-lg hover:bg-gray-200"
+                            onclick="toggleAccordion('menuInicio')">
+                            <span class="w-5 h-5 mr-2 bg-gray-300"></span> Inicio
+                            <span id="icon-menuInicio" class="ml-auto transition-transform duration-300">▼</span>
+                        </button>
+                        <ul id="menuInicio"
+                            class="pl-6 space-y-1 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <li class="p-1 text-gray-600 hover:bg-gray-100">Submenú 1</li>
+                            <li class="p-1 text-gray-600 hover:bg-gray-100">Submenú 2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenedor principal -->
+        <div class="flex flex-col flex-1">
+            <!-- Header -->
+            <header class="flex items-center justify-between p-4 bg-white shadow-md">
+                <button id="menuToggle" class="p-2 md:hidden">
+                    <span class="block w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-7" viewBox="0 0 24 25" fill="none">
+                            <path d="M3 12.5H17M3 6.5H21M3 18.5H21" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+            </header>
+        </div>
+    </div>
+
+    <!-- Menú Mobile -->
+    <div id="mobileMenu"
+        class="fixed inset-0 z-50 hidden transition-opacity duration-300 ease-in-out bg-black bg-opacity-50">
+        <div class="w-10/12 h-full p-4 transition-transform duration-300 ease-in-out transform -translate-x-full bg-white"
+            id="mobileMenuContent">
+            <button id="closeMenu" class="absolute text-gray-500 right-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuContent = document.getElementById('mobileMenuContent');
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                menuContent.classList.remove('-translate-x-full');
+            }, 10);
+        });
+
+        document.getElementById('closeMenu').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuContent = document.getElementById('mobileMenuContent');
+            menuContent.classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+
+        function toggleAccordion(id) {
+            const menu = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-[500px]");
+                icon.classList.add("rotate-180");
+            } else {
+                menu.classList.add("max-h-0");
+                menu.classList.remove("max-h-[500px]");
+                icon.classList.remove("rotate-180");
+            }
+        }
+    </script>
+</body>
+
+</html>

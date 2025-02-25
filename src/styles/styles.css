@@ -159,7 +159,7 @@
 
   /* INPUTS */
   .input-default {
-    @apply block w-full text-sm transition duration-300 bg-transparent border rounded-md shadow-sm placeholder:text-secondary-500 text-secondary-700 border-secondary-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:shadow bg-white;
+    @apply block w-full text-sm transition duration-300 border rounded-md shadow-sm placeholder:text-secondary-500 text-secondary-700 border-secondary-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:shadow bg-secondary-50;
   }
 
   .input-sm {

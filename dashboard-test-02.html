@@ -26,32 +26,17 @@
             <nav>
                 <ul class="space-y-2">
                     <li>
-                        <button class="btn-secondary">
-                            Inicio
-                        </button>
-                    </li>
-                    <li>
                         <button
                             class="flex items-center w-full p-2 font-medium text-gray-700 rounded-lg hover:bg-gray-200"
                             onclick="toggleMenu('menuInicio')">
-                            <span class="w-5 h-5 mr-2 bg-gray-300">
-                            </span> Inicio
-                            <span class="ml-auto">
-
-                                <div data-svg-wrapper class="border-secondary-400">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                    fill="currentColor" class="w-4 h-4">
+                            <span class="w-5 h-5 mr-2 bg-gray-300"></span> Inicio
+                            <span class="ml-auto transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
                                         clip-rule="evenodd" />
-                                </svg> -->
-                            </span>
+                                </svg></span>
                         </button>
                         <ul id="menuInicio" class="hidden pl-6 space-y-1">
                             <li class="p-1 text-gray-600 hover:bg-gray-100">Submenú 1</li>
@@ -62,23 +47,13 @@
                         <button class="flex items-center w-full p-2 font-medium text-gray-700 bg-gray-100 rounded-lg"
                             onclick="toggleMenu('menuDashboard')">
                             <span class="w-5 h-5 mr-2 bg-gray-300"></span> Dashboard
-                            <span class="ml-auto">
-
-                                <div data-svg-wrapper class="border-secondary-400">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                    fill="currentColor" class="w-4 h-4">
+                            <span class="ml-auto transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
                                         clip-rule="evenodd" />
-                                </svg> -->
-                            </span>
+                                </svg></span>
                         </button>
                         <ul id="menuDashboard" class="hidden pl-6 space-y-1">
                             <li class="p-1 text-gray-600 hover:bg-gray-100">Visión General</li>
@@ -92,8 +67,8 @@
         <!-- Contenedor principal -->
         <div class="flex flex-col flex-1">
             <!-- Header -->
-            <header class="flex items-center justify-end p-4 bg-white shadow-md md:shadow-none">
-                <div class="relative w-full max-w-xs mr-4 md:max-w-sm">
+            <header class="flex items-center justify-between p-4 bg-white shadow-md md:shadow-none">
+                <div class="relative w-full max-w-xs md:max-w-sm">
                     <input type="text" placeholder="Buscar" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                 </div>
                 <div class="flex space-x-4">
@@ -154,8 +129,10 @@
     </div>
 
     <!-- Menú Mobile -->
-    <div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 ">
-        <div class="w-10/12 h-full p-4 bg-white">
+    <div id="mobileMenu"
+        class="fixed inset-0 z-50 hidden transition-opacity duration-300 bg-black bg-opacity-50 ease-in-ou">
+        <div
+            class="w-10/12 h-full p-4 transition-transform duration-300 ease-in-out transform -translate-x-full bg-white">
             <button id="closeMenu" class="absolute text-gray-500 right-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                     <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -236,7 +213,7 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         function toggleMenu(id) {
             document.getElementById(id).classList.toggle('hidden');
         }
@@ -246,6 +223,41 @@
         document.getElementById('closeMenu').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.add('hidden');
         });
+    </script> -->
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuContent = document.getElementById('mobileMenuContent');
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                menuContent.classList.remove('-translate-x-full');
+            }, 10);
+        });
+
+        document.getElementById('closeMenu').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuContent = document.getElementById('mobileMenuContent');
+            menuContent.classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+
+        function toggleAccordion(id) {
+            const menu = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-[500px]");
+                icon.classList.add("rotate-180");
+            } else {
+                menu.classList.add("max-h-0");
+                menu.classList.remove("max-h-[500px]");
+                icon.classList.remove("rotate-180");
+            }
+        }
     </script>
 </body>
 
